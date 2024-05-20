@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>自然语言处理NLP | 李萧的博客</title><meta name="author" content="Surely"><meta name="copyright" content="Surely"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="NLP发展历程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自然语言处理NLP">
+<meta property="og:url" content="http://example.com/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/index.html">
+<meta property="og:site_name" content="李萧的博客">
+<meta property="og:description" content="NLP发展历程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/NLP.png">
+<meta property="article:published_time" content="2024-05-20T03:06:28.000Z">
+<meta property="article:modified_time" content="2024-05-20T04:01:35.779Z">
+<meta property="article:author" content="Surely">
+<meta property="article:tag" content="专业前沿">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/NLP.png"><link rel="shortcut icon" href="/img/heart.png"><link rel="canonical" href="http://example.com/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '自然语言处理NLP',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-20 12:01:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/NLP.png')"><nav id="nav"><span id="blog-info"><a href="/" title="李萧的博客"><span class="site-name">李萧的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">自然语言处理NLP</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-20T03:06:28.000Z" title="发表于 2024-05-20 11:06:28">2024-05-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-20T04:01:35.779Z" title="更新于 2024-05-20 12:01:35">2024-05-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="自然语言处理NLP"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>本文旨在介绍前沿的自然语言处理技术-Bert。</strong></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h2><p><strong>2018</strong>年<strong>Google</strong>发布了<strong>BERT</strong>（来自Transformer的双向自编码器）<strong>预训练模型</strong>，旨在通过联合左侧和右侧的上下文，从未标记文本中预训练出一个深度双向表示模型。因此，BERT可以通过增加一个额外的输出层来进行微调，就可以达到为广泛的任务创建State-of-the-arts 模型的效果，比如QA、语言推理任务。</p>
+<p>当时将预训练模应用于下游任务的<strong>策略</strong>通常有两种：<strong>基于特征的（feature-based）</strong>和<strong>基于微调（fine-tuning）</strong>；前者比如<strong>ELMo</strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/130913995#ref_2">[2]</a>，后者比如<strong>OpenAI GPT</strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/130913995#ref_3">[3]</a>;</p>
+<p>这两种策略在预训练期间具有相同的目标函数，在预训练期间，它们使用单向语言模型来学习一般的语言表示。但当前对预训练方法的限制（尤其是对基于微调的方法）是标准语言模型是单向(unidirectional）的，所以限制了在预训练阶段可选的模型结构体系。</p>
+<p>比如GPT是从左到右的，每个token只能关注到前一个token的self-attention layers。这种局限对于句子级任务(sentence-level tasks)来说还不是很打紧，但是对于token-level tasks（比如QA）就很致命，所以结合两个方向的上下文信息至关重要。</p>
+<p><img src="/img/5.20-1.webp" alt="Lena"></p>
+<p>BERT对比这两个算法的优点是，只有BERT表征会基于所有层中的左右两侧语境，而能做到这一点得益于Transformer中Attention机制将任意位置的两个单词的距离转换成了1。<br>那么BERT具体是如何实现的呢? 我们接着往下看</p>
+<h2 id="BERT框架及其详细实现"><a href="#BERT框架及其详细实现" class="headerlink" title="BERT框架及其详细实现"></a>BERT框架及其详细实现</h2><p>我们在本节中介绍BERT及其详细实现，训练框架主要由两个步骤构成：预训练和微调。</p>
+<p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=BERT&spm=1001.2101.3001.7020">BERT</a>，基于transformer的双向编码表示，它是一个预训练模型，模型训练时的两个任务是预测句子中被掩盖的词以及判断输入的两个句子是不是上下句。在预训练好的BERT模型后面根据特定任务加上相应的网络，可以完成NLP的下游任务，比如文本分类、机器翻译等。</p>
+<p>       虽然BERT是基于transformer的，但是它只使用了transformer的encoder部分，它的整体框架是由多层transformer的encoder堆叠而成的。每一层的encoder则是由一层muti-head-attention和一层feed-forword组成，大的模型有24层，每层16个attention，小的模型12层，每层12个attention。每个attention的主要作用是通过目标词与句子中的所有词汇的相关度，对目标词重新编码。所以每个attention的计算包括三个步骤：计算词之间的相关度，对相关度归一化，通过相关度和所有词的编码进行加权求和获取目标词的编码。</p>
+<p>        在通过attention计算词之间的相关度时，首先通过三个权重矩阵对输入的序列向量(512*768)做线性变换，分别生成query、key和value三个新的序列向量，用每个词的query向量分别和序列中的所有词的key向量做乘积，得到词与词之间的相关度，然后这个相关度再通过softmax进行归一化，归一化后的权重与value加权求和，得到每个词新的编码。</p>
+<h3 id="模型输入"><a href="#模型输入" class="headerlink" title="模型输入"></a>模型输入</h3><p>      在BERT中，输入的向量是由三种不同的embedding求和而成，分别是：</p>
+<ol>
+<li><p><strong>wordpiece embedding</strong>：单词本身的向量表示。WordPiece是指将单词划分成一组有限的公共子词单元，能在单词的有效性和字符的灵活性之间取得一个折中的平衡。</p>
+</li>
+<li><p><strong>position embedding</strong>：将单词的位置信息编码成特征向量。因为我们的网络结构没有RNN 或者LSTM，因此我们无法得到序列的位置信息，所以需要构建一个position embedding。构建position embedding有两种方法：BERT是初始化一个position embedding，然后通过训练将其学出来；而Transformer是通过制定规则来构建一个position embedding</p>
+</li>
+<li><p><strong>segment embedding</strong>：用于区分两个句子的向量表示。这个在问答等非对称句子中是用区别的。</p>
+<p> BERT模型的输入就是wordpiece token embedding + segment embedding + position embedding，如图所示：</p>
+</li>
+</ol>
+<p>        <img src="/img/520-2.png" alt="Lena"><br>        对于每一种向量的具体表现形式，可以参考这篇文章，可视化的给出了BERT中各种embedding的表现：</p>
+<p>        <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/DfIAuo775_sHGYi5z9IZyw" title="BERT的嵌入层是如何实现的？看完你就明白了">BERT的嵌入层是如何实现的？看完你就明白了</a></p>
+<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p>        BERT的主要结构是transformer（如图1所示），一个BERT预训练模型的基础结构是标准transformer结构的encoder部分，一个标准transformer结构如图2所示，其中左边的部分就是BERT中使用的encoder部分。<br>   <img src="/img/520-3.png" alt="Lena"><br>   <p align="center">Bert网络结构</p><br>   一个transformer的encoder单元由一个multi-head-Attention + <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Layer&spm=1001.2101.3001.7020">Layer</a> Normalization + feedforword + Layer Normalization 叠加产生，BERT的每一层由一个这样的encoder单元构成。在比较大的BERT模型中，有24层encoder，每层中有16个Attention，词向量的维度是1024。在比较小的BERT模型中，有12层encoder，每层有12个Attention，词向量维度是768。在所有情况下，将feed-forward&#x2F;filter 的大小设置为 4H（H为词向量的维度），即H &#x3D; 768时为3072，H &#x3D; 1024时为4096。</p>
+<p>        这种transformer的结构可以使用上下文来预测mask的token，从而捕捉双向关系。<br>       <br>  <img src="/img/520-4.jpg" alt="Lena"><br>  <p align="center">标准的transformer结构（左边是encoder部分）</p></p>
+<h3 id="训练框架"><a href="#训练框架" class="headerlink" title="训练框架"></a>训练框架</h3><p><img src="/img/520-5.png" alt="Lena"><br>BERT的总体预培训和微调程序。除了输出层，预训练和微调中都使用相同的体系结构。相同的预训练模型参数用于初始化不同下游任务的模型。在微调期间，所有参数都会微调。[CLS]是在每个输入示例前面添加的特殊符号，【SEP】是一个特殊的分隔符令牌（例如，分隔问题&#x2F;答案）。</p>
+<ul>
+<li><strong>Pre-training预训练：</strong></li>
+</ul>
+<p>在预训练阶段，BERT用大量的<strong>无监督</strong>文本通过自监督训练的方式(通过使用受完形填空任务启发的<strong>Masked Language Model</strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/130913995#ref_4">[4]</a>预训练目标)训练，把文本中包含的语言知识（包括：词法、语法、语义等特征）以参数的形式编码到Transformer-encoder layer中。预训练模型学习到的是文本的通用知识，不依托于某一项NLP任务；（2.4小节展开详述）</p>
+<ul>
+<li><strong>Fine-Tuning微调：</strong></li>
+</ul>
+<p>NLP 问题被证明同图像一样，可以通过 finetune 在垂直领域取得效果的提升。Bert 模型本身极其依赖计算资源，从 0 训练对大多数开发者都是难以想象的事。在节省资源避免重头开始训练的同时，为更好的拟合垂直领域的语料，我们有了 finetune 的动机。</p>
+<p>在微调阶段，BERT首先使用预训练的参数初始化模型，所有参数都使用下游任务的标签数据进行微调，每个不同的下游任务都有单独的微调模型（2.5小节展开详述）</p>
+<h3 id="模型架构"><a href="#模型架构" class="headerlink" title="模型架构"></a><strong>模型架构</strong></h3><p>BERT的模型体系结构是基于Vaswani等人描述的原始实现的多层双向变压器编码器<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/130913995#ref_5">[5]</a></p>
+<p>关于大名鼎鼎的底座模型Transformer这边就不展开赘述了，详情可参考优秀指南<br><a href="https://link.zhihu.com/?target=http://nlp.seas.harvard.edu/2018/04/03/attention.html">http://nlp.seas.harvard.edu/2018/04/03/attention.html​nlp.seas.harvard.edu/2018/04/03/attention.html<img src="https://pic1.zhimg.com/v2-5db46b14342e33f39d2b6507100efb94_120x160.jpg"></a></p>
+<p>首先明确几个概念，在本工作中，我们命名表示层数为L（Transformer Blocks），隐藏层数为H，自注意力头数量为A。我们主要报告的型号尺寸为</p>
+<ul>
+<li>BERT_base(L&#x3D;12,H&#x3D;768,A&#x3D;12; parameters&#x3D;110M)</li>
+<li>BERT_large(L&#x3D;24,H&#x3D;1024,A&#x3D;16; parameters&#x3D;340M)</li>
+</ul>
+<p>后者的大小和OpenAI GPT是相同的，以便比较效果。</p>
+<h3 id="输入-x2F-输出表示"><a href="#输入-x2F-输出表示" class="headerlink" title="输入&#x2F;输出表示"></a><strong>输入&#x2F;输出表示</strong></h3><p><img src="/img/520-6.webp" alt="Lena"><br>如上图所示，BERT模型有两个特殊的token：<strong>CLS</strong> （用于分类任务）、 <strong>SEP</strong>（用于断句），以及三个类型的<strong>embedding</strong>：</p>
+<ul>
+<li><p><strong>Token embedding：</strong>输入的文本经过tokenization之后，将CLS插入tokenization结果的开头，SEP插入到tokenization结果的结尾。然后进行token embedding look up。shape为：[seq_length, embedding_dims]。流程如下图所示：<br><img src="/img/520-7.png" alt="Lena"></p>
+</li>
+<li><p><strong>Segment embedding：</strong>在NSP任务中，用于区分第一句和第二句。segment embedding中只有 0 和 1两个值，第一句所有的token（包括cls和紧随第一句的sep）的segment embedding的值为0，第二句所有的token（包括紧随第二句的sep）的segment embdding的值为1。shape为：[seq_length, embedding_dims]。流程如下图所示： <img src="/img/520-8.png" alt="Lena"><br> Segment Embeddings 层只有两种向量表示。前一个向量是把0赋给第一个句子中的各个token, 后一个向量是把1赋给第二个句子中的各个token。如果输入仅仅只有一个句子，那么它的segment embedding就是全0 </p>
+</li>
+<li><p>position Embedding</p>
+</li>
+</ul>
+<p>Transformers无法编码输入的序列的顺序性,加入position embeddings会让BERT理解下面下面这种情况, I think, therefore I am,第一个 “I” 和第二个 “I”应该有着不同的向量表示</p>
+<p>BERT能够处理最长512个token的输入序列。论文作者通过让BERT在各个位置上学习一个向量表示来讲序列顺序的信息编码进来。这意味着Position Embeddings layer 实际上就是一个大小为 (512, 768) 的lookup表，表的第一行是代表第一个序列的第一个位置，第二行代表序列的第二个位置，以此类推。因此，如果有这样两个句子“Hello world” 和“Hi there”, “Hello” 和“Hi”会由完全相同的position embeddings，因为他们都是句子的第一个词。同理，“world” 和“there”也会有相同的position embedding</p>
+<p>我们已经介绍了长度为n的输入序列将获得的三种不同的向量表示，分别是：</p>
+<p>Token Embeddings， (1, n, 768) ，词的向量表示<br>Segment Embeddings， (1, n, 768)，辅助BERT区别句子对中的两个句子的向量表示<br>Position Embeddings ，(1, n, 768) ，让BERT学习到输入的顺序属性<br>这些表示会被按元素相加，得到一个大小为(1, n, 768)的合成表示。这一表示就是BERT编码层的输入了<br>因此，BERT的输入为：</p>
+<p><strong>token_embedding + segment_embedding + position_embedding</strong></p>
+<h2 id="预训练任务"><a href="#预训练任务" class="headerlink" title="预训练任务"></a><strong>预训练任务</strong></h2><p><strong>（1）masked language model</strong></p>
+<p>         随机掩盖掉一些单词，然后通过上下文预测该单词。BERT中有15%的wordpiece token会被随机掩盖，这15%的token中80%用[MASK]这个token来代替，10%用随机的一个词来替换，10%保持这个词不变。这种设计使得模型具有捕捉上下文关系的能力，同时能够有利于token-level tasks例如序列标注。</p>
+<p>Q：为什么选中的15%的wordpiece token不能全部用 [MASK]代替，而要用 10% 的 random token 和 10% 的原 token</p>
+<p>       [MASK] 是以一种显式的方式告诉模型『这个词我不告诉你，你自己从上下文里猜』，从而防止信息泄露。如果 [MASK] 以外的部分全部都用原 token，模型会学到『如果当前词是 [MASK]，就根据其他词的信息推断这个词；如果当前词是一个正常的单词，就直接抄输入』。这样一来，在 finetune 阶段，所有词都是正常单词，模型就照抄所有词，不提取单词间的依赖关系了。</p>
+<p>        以一定的概率填入 random token，就是让模型时刻堤防着，在任意 token 的位置都需要把当前 token 的信息和上下文推断出的信息相结合。这样一来，在 finetune 阶段的正常句子上，模型也会同时提取这两方面的信息，因为它不知道它所看到的『正常单词』到底有没有被动过手脚的。</p>
+<p>Q：最后怎么利用[MASK] token做的预测？</p>
+<p>       最终的损失函数只计算被mask掉的token的，每个句子里 [MASK] 的个数是不定的。实际代码实现是每个句子有一个 maximum number of predictions，取所有 [MASK] 的位置以及一些 PADDING 位置的向量拿出来做预测（总共凑成 maximum number of predictions 这么多个预测，是定长的），然后再用掩码把 PADDING 盖掉，只计算[MASK]部分的损失。</p>
+<p><strong>（2）next sentence prediction</strong></p>
+<p>        语料中50%的句子，选择其相应的下一句一起形成上下句，作为正样本；其余50%的句子随机选择一句非下一句一起形成上下句，作为负样本。这种设定，有利于sentence-level tasks，例如问答。注意：作者特意说了语料的选取很关键，要选用document-level的而不是sentence-level的，这样可以具备抽象连续长序列特征的能力。</p>
+<h3 id="模型训练设置"><a href="#模型训练设置" class="headerlink" title="模型训练设置"></a>模型训练设置</h3><ul>
+<li><strong>pre-train阶段</strong></li>
+</ul>
+<p>（1）256个句子作为一个batch,每个句子最多512个token。</p>
+<p>（2）迭代100万步。</p>
+<p>（3）总共训练样本超过33亿。</p>
+<p>（4）迭代40个epochs。</p>
+<p>（5）用adam学习率， 1 &#x3D; 0.9, 2 &#x3D; 0.999。</p>
+<p>（6）学习率头一万步保持固定值，之后线性衰减。</p>
+<p>（7）L2衰减，衰减参数为0.01。</p>
+<p>（8）drop out设置为0.1。</p>
+<p>（9）激活函数用GELU代替RELU。</p>
+<p>（10）Bert base版本用了16个TPU，Bert large版本用了64个TPU，训练时间4天完成。</p>
+<p>（论文定义了两个版本，一个是base版本，一个是large版本。Large版本（L&#x3D;24, H&#x3D;1024, A&#x3D;16, Total Parameters&#x3D;340M）。base版本（ L&#x3D;12, H&#x3D;768, A&#x3D;12, Total Pa- rameters&#x3D;110M）。L代表网络层数，H代表隐藏层数，A代表self attention head的数量。）</p>
+<p>因为序列长度太大（512）会影响训练速度，所以90%的steps都用seq_len&#x3D;128训练，余下的10%步数训练512长度的输入。</p>
+<ul>
+<li><p><strong>fine-tune 阶段</strong></p>
+<p>  微调阶段根据不同任务使用不同网络模型。在微调阶段，大部分模型的超参数跟预训练时差不多，除了batchsize，学习率，epochs。</p>
+<p>  微调参数建议：</p>
+<p>  Batch size: 16, 32</p>
+<p>  Learning rate (Adam): 5e-5, 3e-5, 2e-5</p>
+<p>  Number of epochs: 3, 4</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="模型特点"><a href="#模型特点" class="headerlink" title="模型特点"></a>模型特点</h3><p>（1）使用transformer作为算法的主要框架，transformer能<strong>更彻底的捕捉语句中的双向关系</strong>；</p>
+<p>（2）使用了mask language model 和next sentence prediction的多任务训练目标，<strong>是一个自监督的过程，不需要数据的标注</strong>；</p>
+<p>（3）使用tpu这种强大的机器训练了大规模的预料，是NLP的很多任务达到了全新的高度。</p>
+<p>       BERT本质上是在海量语料的基础上，通过自监督学习的方法为单词学习一个好的特征表示。该模型的优点是可以根据具体的人物进行微调，或者直接使用预训练的模型作为特征提取器。</p>
+<h3 id="可优化空间"><a href="#可优化空间" class="headerlink" title="可优化空间"></a>可优化空间</h3><p>（1）如何让模型有<strong>捕捉Token序列关系</strong>的能力，而不是简单依靠位置嵌入。</p>
+<p>（2）模型太大，太耗机器（后续的Albert有做改进）</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Surely</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/">http://example.com/2024/05/20/自然语言处理NLP/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">李萧的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%93%E4%B8%9A%E5%89%8D%E6%B2%BF/">专业前沿</a></div><div class="post_share"><div class="social-share" data-image="/img/NLP.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用"><img class="cover" src="/img/njjk.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">脑机接口在神经康复中的应用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用"><img class="cover" src="/img/njjk.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-19</div><div class="title">脑机接口在神经康复中的应用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODQyMS8zNDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Surely</div><div class="author-info__description">新的开始，欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lixiao2024" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1290059235@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.surelylee2048.com.cn" target="_blank" title="博客"><i class="fab fa-algolia"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BERT%E6%A1%86%E6%9E%B6%E5%8F%8A%E5%85%B6%E8%AF%A6%E7%BB%86%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">BERT框架及其详细实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%BE%93%E5%85%A5"><span class="toc-number">2.1.</span> <span class="toc-text">模型输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">网络结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%A1%86%E6%9E%B6"><span class="toc-number">2.3.</span> <span class="toc-text">训练框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84"><span class="toc-number">2.4.</span> <span class="toc-text">模型架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5-x2F-%E8%BE%93%E5%87%BA%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.5.</span> <span class="toc-text">输入&#x2F;输出表示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E8%AE%AD%E7%BB%83%E4%BB%BB%E5%8A%A1"><span class="toc-number">3.</span> <span class="toc-text">预训练任务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">模型训练设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E7%89%B9%E7%82%B9"><span class="toc-number">4.1.</span> <span class="toc-text">模型特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E4%BC%98%E5%8C%96%E7%A9%BA%E9%97%B4"><span class="toc-number">4.2.</span> <span class="toc-text">可优化空间</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP"><img src="/img/NLP.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自然语言处理NLP"/></a><div class="content"><a class="title" href="/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP">自然语言处理NLP</a><time datetime="2024-05-20T03:06:28.000Z" title="发表于 2024-05-20 11:06:28">2024-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用"><img src="/img/njjk.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="脑机接口在神经康复中的应用"/></a><div class="content"><a class="title" href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用">脑机接口在神经康复中的应用</a><time datetime="2024-05-19T13:12:05.000Z" title="发表于 2024-05-19 21:12:05">2024-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/08/php%E4%B9%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="PHP之文件上传"><img src="/img/php.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PHP之文件上传"/></a><div class="content"><a class="title" href="/2023/10/08/php%E4%B9%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="PHP之文件上传">PHP之文件上传</a><time datetime="2023-10-08T13:32:26.505Z" title="发表于 2023-10-08 21:32:26">2023-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/16/php%E4%B9%8B%E8%A1%A8%E5%8D%95/" title="PHP之表单操作"><img src="/img/php.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PHP之表单操作"/></a><div class="content"><a class="title" href="/2023/06/16/php%E4%B9%8B%E8%A1%A8%E5%8D%95/" title="PHP之表单操作">PHP之表单操作</a><time datetime="2023-06-16T15:32:42.195Z" title="发表于 2023-06-16 23:32:42">2023-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/16/php%E4%B9%8B%E6%95%B0%E6%8D%AE%E5%BA%93/" title="PHP之数据库操作"><img src="/img/php.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PHP之数据库操作"/></a><div class="content"><a class="title" href="/2023/06/16/php%E4%B9%8B%E6%95%B0%E6%8D%AE%E5%BA%93/" title="PHP之数据库操作">PHP之数据库操作</a><time datetime="2023-06-16T12:03:25.076Z" title="发表于 2023-06-16 20:03:25">2023-06-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/NLP.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Surely</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="I,love,u" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
