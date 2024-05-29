@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>超算简介 | 前沿技术分享</title><meta name="author" content="Surely"><meta name="copyright" content="Surely"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是超级计算？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="超算简介">
+<meta property="og:url" content="http://example.com/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/index.html">
+<meta property="og:site_name" content="前沿技术分享">
+<meta property="og:description" content="什么是超级计算？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/super.jpg">
+<meta property="article:published_time" content="2024-05-29T00:32:02.000Z">
+<meta property="article:modified_time" content="2024-05-29T00:54:26.805Z">
+<meta property="article:author" content="Surely">
+<meta property="article:tag" content="专业前沿">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/super.jpg"><link rel="shortcut icon" href="/img/heart.png"><link rel="canonical" href="http://example.com/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '超算简介',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-29 08:54:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/super.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="前沿技术分享"><span class="site-name">前沿技术分享</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">超算简介</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-29T00:32:02.000Z" title="发表于 2024-05-29 08:32:02">2024-05-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-29T00:54:26.805Z" title="更新于 2024-05-29 08:54:26">2024-05-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="超算简介"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="什么是超级计算技术？"><a href="#什么是超级计算技术？" class="headerlink" title="什么是超级计算技术？"></a>什么是超级计算技术？</h1><p>超级计算技术包括超级计算机，世界上最快的计算机。 超级计算机由互连、输入&#x2F;输出系统、内存和处理器核心组成。</p>
+<p>不同于传统的计算机，超级计算机使用多个中央处理器 (CPU)。 这些 CPU 分组成多个计算节点，包含一个处理器或一组处理器（对称多处理 (SMP)）和一个内存块。 在规模上，超级计算机可以包含数万个节点。 凭借互连通信能力，这些节点可以协作解决特定问题。 节点也使用互连功能与输入&#x2F;输出系统通信，比如<a target="_blank" rel="noopener" href="https://www.ibm.com/cn-zh/topics/data-storage">数据存储</a> 和<a target="_blank" rel="noopener" href="https://www.ibm.com/cn-zh/cloud/learn/networking-a-complete-guide">联网</a>。</p>
+<p>需要注意的一点是，由于现代超级计算机的功耗，数据中心需要冷却系统和合适的设施来容纳所有的这些设备。</p>
+<hr>
+<h1 id="超级计算有什么用？"><a href="#超级计算有什么用？" class="headerlink" title="超级计算有什么用？"></a>超级计算有什么用？</h1><p>医疗方向：机器学习算法将帮助医学研究人员全面了解美国抗癌人患者的详细情况。当然巨大的算力，也就意味着超级计算有着举足轻重的地位。<a target="_blank" rel="noopener" href="https://www.ibm.com/blogs/research/2019/07/ai-tools-for-cancer-research/">对抗癌症</a><br>识别下一代材料：深度学习可以帮助科学家识别更好的电池材料，更具弹性的建筑材料和更搞笑的半导体材料。<a target="_blank" rel="noopener" href="https://research.ibm.com/blog/ibm-molecule-generation-experience">识别下一代材料</a><br>了解疾病类型：通过混合使用人工智能技术，研究人员将确定人类蛋白质和细胞系统的功能、合作和进化模式。<a target="_blank" rel="noopener" href="https://newsroom.ibm.com/IBM-helps-bring-supercomputers-into-the-global-fight-against-COVID-19">了解疾病类型</a></p>
+<hr>
+<h1 id="超级计算和人工智能"><a href="#超级计算和人工智能" class="headerlink" title="超级计算和人工智能"></a>超级计算和人工智能</h1><p>因为超级计算机经常用来运行<a target="_blank" rel="noopener" href="https://www.ibm.com/cn-zh/cloud/learn/what-is-artificial-intelligence">人工智能</a> 程序，所以超级计算已经成为人工智能的代名词。 这种常规的用法是因为人工智能程序需要超计算机提供的高性能计算。 换言之，超级计算机可以处理人工智能应用程序通常需要的工作负载类型。</p>
+<p>IBM 专门针对大数据和人工智能工作负载构建了 <a target="_blank" rel="noopener" href="https://www.ibm.com/thought-leadership/summit-supercomputer/">Summit 和 Sierra 超级计算机</a> 。 它们将帮助我们模拟超新星，开拓新材料，探索癌症治疗、遗传学与环境 - 利用面向所有业务领域的技术。</p>
+<hr>
+<p>超级计算有多快？</p>
+<p>超级计算以每秒浮点运算次数 (FLOPS) 衡量。 Petaflops 是计算机处理速度的一种度量单位，等同于每秒千万亿次浮点运算。 速度为 1 petaflop 的计算机系统每秒可以执行百万的四次方次浮点运算 (1015)。 从另一个角度来说，超级计算机的处理能力比最快的笔记本电脑高出一百万倍。  </p>
+<p>最快的超级计算机是什么？</p>
+<p>根据 <a target="_blank" rel="noopener" href="https://www.top500.org/lists/top500/2021/06/">500 强名单</a> （链接位于 ibm.com 外部），世界上最快的超级计算机是日本的 Fugaku，截至 2021 年 6 月统计的速度是 442 petaflop。 IBM 超级计算机 Summit 和 Sierra 分别位列第二名和第三名，速度分别是 148.8 和 94.6 petaflop。 Summit 位于橡树岭国家实验室，这是美国能源部在田纳西州设立的设施。 Sierra 位于加利福尼亚州的劳伦斯利弗莫尔国家实验室。</p>
+<p>为了清楚地认识现在的速度，1976 年在洛斯阿拉莫斯国家实验室安装 Cray-1 时，它的速度能达到约 160 megaflop。 1 megaflop 可以执行一百万次 (106) 浮点运算。</p>
+<hr>
+<h1 id="超级计算与……"><a href="#超级计算与……" class="headerlink" title="超级计算与……"></a>超级计算与……</h1><p>超级计算一词有时用于指代其他类型的计算。 但是其他时候，这些同义词可能会令人困惑。 为了阐明计算类型之间的一些异同，下面介绍一些常见的比较。  </p>
+<h2 id="超级计算与高性能计算"><a href="#超级计算与高性能计算" class="headerlink" title="超级计算与高性能计算"></a>超级计算与高性能计算</h2><p>超级计算通常是指超级计算机使用的复杂的大型计算过程，而<a target="_blank" rel="noopener" href="https://www.ibm.com/cn-zh/topics/hpc">高性能计算</a>（HPC）是指使用多台超级计算机来处理复杂的大型计算。 这两个术语经常互换使用。</p>
+<h2 id="超级计算与并行计算"><a href="#超级计算与并行计算" class="headerlink" title="超级计算与并行计算"></a>超级计算与并行计算</h2><p>超级计算机有时也被称为并行计算机，因为超级计算机可以使用并行处理。 并行处理是指多个 CPU 在给定时间共同对单个计算求解。 然而，HPC 场景也使用并行性，但不一定使用超级计算机。</p>
+<p>另一个例外是，超级计算机可以使用其他处理器系统，例如向量处理器、标量处理器或多线程处理器。</p>
+<p><a target="_blank" rel="noopener" href="https://www.ibm.com/quantum-computing">量子计算</a>是一种计算模型，它利用量子力学定律来处理数据，根据概率执行计算。 它旨在解决世界上最强大的超级计算机无法且永远不会解决的复杂问题。</p>
+<hr>
+<h1 id="超级计算的历史"><a href="#超级计算的历史" class="headerlink" title="超级计算的历史"></a>超级计算的历史</h1><h2 id="超级计算是什么时候出现的？"><a href="#超级计算是什么时候出现的？" class="headerlink" title="超级计算是什么时候出现的？"></a>超级计算是什么时候出现的？</h2><p>超级计算已有多年的发展历史。20 世纪 40 年代，当巨人计算机被运到布莱切利园并正式开始使用时，超级计算就诞生了。 巨人计算机是第一台具有一定功能的电子数字计算机，由邮政总局 (GPO) 研究电话工程师 Tommy Flowers 设计。</p>
+<h2 id="超级计算机最早是什么时候发明的？"><a href="#超级计算机最早是什么时候发明的？" class="headerlink" title="超级计算机最早是什么时候发明的？"></a>超级计算机最早是什么时候发明的？</h2><p><em>超级计算机</em> 一词最早是在 20 世纪 60 年代初开始使用，当时 IBM 推出了 IBM 7030 Stretch，同时 Sperry Rand 公开了 UNIVAC LARC，这是最早的两台专门的超级计算机，其功能远远超过当时最快的商用电脑。 真正影响超级计算机发展进程的事件是 20 世纪 50 年代末美国政府开始定期拨款，资助开发前沿的高性能计算机技术以用于军事应用。</p>
+<p>尽管超级计算机最初生产数量有限，并且仅为政府所用，但这项逐渐进步的技术最终在工业和商业主流中找到了用武之地。 例如，Control Data Corporation (CDC) 和 Cray Research 这两家美国公司从六十年代中期到七十年代末期，一直领导着商业超级计算机行业。 由 Seymour Cray 设计的 CDC 6600 被认为是第一台成功的商用超级计算机。 IBM 后来居上，从 20 世纪 90 年代到今天一直是商业行业的领导者。</p>
+<h1 id="太湖之光"><a href="#太湖之光" class="headerlink" title="太湖之光"></a>太湖之光</h1><h2 id="研发背景"><a href="#研发背景" class="headerlink" title="研发背景"></a>研发背景</h2><p>超级计算机，被称为“国之重器”，超级计算属于战略高技术领域，是世界各国竞相角逐的科技制高点，也是一个国家科技实力的重要标志之一 [3]。</p>
+<p>神威·太湖之光超级计算机作为国家863计划信息技术领域重大项目支持的课题之一，2014年由科技部立项，科技部的要求是建成全球一流的超级计算机和全球一流的超算中心 [4-5]。</p>
+<h2 id="组成结构"><a href="#组成结构" class="headerlink" title="组成结构"></a>组成结构</h2><p><img src="/img/529-1.webp" alt="Lena"></p>
+<p align="center">内部构造</p>
+神威·太湖之光超级计算机由40个运算机柜和8个[网络机柜](https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E6%9C%BA%E6%9F%9C/1857102?fromModule=lemma_inlink)组成。每个运算机柜比家用的双门冰箱略大，打开柜门，4块由32块运算插件组成的超节点分布其中。每个插件由4个运算节点板组成，一个运算节点板又含2块“[申威26010](https://baike.baidu.com/item/%E7%94%B3%E5%A8%8126010/0?fromModule=lemma_inlink)”高性能处理器。一台机柜就有1024块[处理器](https://baike.baidu.com/item/%E5%A4%84%E7%90%86%E5%99%A8/914419?fromModule=lemma_inlink)，整台“神威·太湖之光”共有40960块处理器 [6]。
+
+<hr>
+<h2 id="主要性能"><a href="#主要性能" class="headerlink" title="主要性能"></a>主要性能</h2><p>1.峰值性能12.5亿亿次每秒 [19]</p>
+<p>2.持续性能9.3亿亿次每秒 [19]</p>
+<p>3.性能功耗比6051MFlops&#x2F;W [6]</p>
+<h2 id="世界排名"><a href="#世界排名" class="headerlink" title="世界排名"></a>世界排名</h2><p>2016年6月20日，德国法兰克福国际超算大会（ISC）公布了新一期全球超级计算机TOP500榜单，由国家并行计算机工程技术研究中心研制的“神威·太湖之光”以超第二名近三倍的运算速度夺得第一 [6]。</p>
+<p>2016年11月14日，新一期全球超级计算机500强（TOP500）榜单，中国“神威·太湖之光”以较大的运算速度优势轻松蝉联冠军。算上此前“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%A9%E6%B2%B3%E4%BA%8C%E5%8F%B7/0?fromModule=lemma_inlink">天河二号</a>”的六连冠，中国已连续4年占据全球超算排行榜的最高席位 [7]。</p>
+<p>2017年6月19日，在德国法兰克福召开的I SC2017国际高性能计算大会上，“神威·太湖之光”超级计算机以每秒12.54亿亿次的峰值计算能力以及每秒9.3亿亿次的持续计算能力，再次斩获世界超级计算机排名榜单TOP500第一名 [8]。</p>
+<p>2017年11月13日，新一期全球超级计算机500强榜单发布，中国超级计算机“神威·太湖之光”和“天河二号”连续第四次分列冠亚军，且中国超级计算机上榜总数又一次反超美国，夺得第一 [9]。</p>
+<p>2018年11月12日，新一期全球超级计算机500强榜单在美国达拉斯发布，中国超算“神威·太湖之光”位列第三名 [10]。</p>
+<p>2020年6月，全球超级计算机Top500榜单公布，神威·太湖之光排名第四 [11]。</p>
+<p>2021年，最新一期的全球超级计算机500强榜单公布，中国超级计算机“神威·太湖之光”，本次排名第四位。 [16]</p>
+<p>2023年，最新的全球超级计算机500强榜单公布，中国超级计算机“神威·太湖之光”，本次排名第七位。</p>
+<hr>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>以<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/111764?fromModule=lemma_inlink">清华大学</a>为主体的科研团队首次实现了百万核规模的全球10公里高分辨率地球系统数值模拟，将全面提高中国应对极端气候和自然灾害的减灾防灾能力；<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9B%BD%E5%AE%B6%E8%AE%A1%E7%AE%97%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E5%AE%9E%E9%AA%8C%E5%AE%A4/0?fromModule=lemma_inlink">国家计算流体力学实验室</a>对“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%A9%E5%AE%AB%E4%B8%80%E5%8F%B7/0?fromModule=lemma_inlink">天宫一号</a>”返回路径的数值模拟将为“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%A9%E5%AE%AB%E4%B8%80%E5%8F%B7/0?fromModule=lemma_inlink">天宫一号</a>”顺利回家提供精确预测；上海药物所开展的药物筛选和疾病机理研究，大大加速了白血病、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%99%8C%E7%97%87/151056?fromModule=lemma_inlink">癌症</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A6%BD%E6%B5%81%E6%84%9F/233181?fromModule=lemma_inlink">禽流感</a>等方向的药物设计进度 [6]。</p>
+<p><img src="/img/529-2.webp" alt="Lena"></p>
+<p align="center">戈登贝尔奖获奖</p>
+2016年11月18日凌晨4：20时许（北京时间），2016年度“戈登·贝尔”奖的谜底终于在美国[盐湖城](https://baike.baidu.com/item/%E7%9B%90%E6%B9%96%E5%9F%8E/8808871?fromModule=lemma_inlink)举行的[国际超算大会](https://baike.baidu.com/item/%E5%9B%BD%E9%99%85%E8%B6%85%E7%AE%97%E5%A4%A7%E4%BC%9A/0?fromModule=lemma_inlink)（SC16）上揭晓。[中科院软件所](https://baike.baidu.com/item/%E4%B8%AD%E7%A7%91%E9%99%A2%E8%BD%AF%E4%BB%B6%E6%89%80/0?fromModule=lemma_inlink)杨超研究员与清华大学副教授[薛巍](https://baike.baidu.com/item/%E8%96%9B%E5%B7%8D/13884453?fromModule=lemma_inlink)、[付昊桓](https://baike.baidu.com/item/%E4%BB%98%E6%98%8A%E6%A1%93/0?fromModule=lemma_inlink)等人联合北师大组成的研究团队凭借在“神威·太湖之光”上运行的“全球大气非静力云分辨模拟”应用一举摘得该项锦标。此次全球共有6项应用成果入围“戈登·贝尔”奖最终提名，其中3项都是依托“神威·太湖之光”完成的。其余2项应用分别为[国家海洋局](https://baike.baidu.com/item/%E5%9B%BD%E5%AE%B6%E6%B5%B7%E6%B4%8B%E5%B1%80/9930877?fromModule=lemma_inlink)海洋一所与[清华大学](https://baike.baidu.com/item/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/111764?fromModule=lemma_inlink)合作的“高分辨率海浪数值模拟”和[中科院网络中心](https://baike.baidu.com/item/%E4%B8%AD%E7%A7%91%E9%99%A2%E7%BD%91%E7%BB%9C%E4%B8%AD%E5%BF%83/5912200?fromModule=lemma_inlink)的“[钛合金](https://baike.baidu.com/item/%E9%92%9B%E5%90%88%E9%87%91/1170982?fromModule=lemma_inlink)微结构演化相场模拟” [12]。</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Surely</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/">http://example.com/2024/05/29/超算简介/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">前沿技术分享</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%93%E4%B8%9A%E5%89%8D%E6%B2%BF/">专业前沿</a></div><div class="post_share"><div class="social-share" data-image="/img/super.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/05/28/hexo%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86/" title="hexo框架原理"><img class="cover" src="/img/hexokj.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo框架原理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/05/22/Web3%E4%BB%8B%E7%BB%8D/" title="Web3介绍"><img class="cover" src="/img/Web3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-22</div><div class="title">Web3介绍</div></div></a></div><div><a href="/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP"><img class="cover" src="/img/NLP.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-20</div><div class="title">自然语言处理NLP</div></div></a></div><div><a href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用"><img class="cover" src="/img/njjk.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-19</div><div class="title">脑机接口在神经康复中的应用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODQyMS8zNDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Surely</div><div class="author-info__description">新的开始，欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lixiao2024" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1290059235@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.surelylee2048.com.cn" target="_blank" title="博客"><i class="fab fa-algolia"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是超级计算技术？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">超级计算有什么用？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E5%92%8C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="toc-number">3.</span> <span class="toc-text">超级计算和人工智能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E4%B8%8E%E2%80%A6%E2%80%A6"><span class="toc-number">4.</span> <span class="toc-text">超级计算与……</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E4%B8%8E%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97"><span class="toc-number">4.1.</span> <span class="toc-text">超级计算与高性能计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97"><span class="toc-number">4.2.</span> <span class="toc-text">超级计算与并行计算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-number">5.</span> <span class="toc-text">超级计算的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%98%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%87%BA%E7%8E%B0%E7%9A%84%EF%BC%9F"><span class="toc-number">5.1.</span> <span class="toc-text">超级计算是什么时候出现的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%80%E6%97%A9%E6%98%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%91%E6%98%8E%E7%9A%84%EF%BC%9F"><span class="toc-number">5.2.</span> <span class="toc-text">超级计算机最早是什么时候发明的？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%AA%E6%B9%96%E4%B9%8B%E5%85%89"><span class="toc-number">6.</span> <span class="toc-text">太湖之光</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E5%8F%91%E8%83%8C%E6%99%AF"><span class="toc-number">6.1.</span> <span class="toc-text">研发背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84"><span class="toc-number">6.2.</span> <span class="toc-text">组成结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD"><span class="toc-number">6.3.</span> <span class="toc-text">主要性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%96%E7%95%8C%E6%8E%92%E5%90%8D"><span class="toc-number">6.4.</span> <span class="toc-text">世界排名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.5.</span> <span class="toc-text">应用场景</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/" title="超算简介"><img src="/img/super.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="超算简介"/></a><div class="content"><a class="title" href="/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/" title="超算简介">超算简介</a><time datetime="2024-05-29T00:32:02.000Z" title="发表于 2024-05-29 08:32:02">2024-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/28/hexo%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86/" title="hexo框架原理"><img src="/img/hexokj.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo框架原理"/></a><div class="content"><a class="title" href="/2024/05/28/hexo%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86/" title="hexo框架原理">hexo框架原理</a><time datetime="2024-05-28T14:01:42.000Z" title="发表于 2024-05-28 22:01:42">2024-05-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/22/Web3%E4%BB%8B%E7%BB%8D/" title="Web3介绍"><img src="/img/Web3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Web3介绍"/></a><div class="content"><a class="title" href="/2024/05/22/Web3%E4%BB%8B%E7%BB%8D/" title="Web3介绍">Web3介绍</a><time datetime="2024-05-21T16:15:51.000Z" title="发表于 2024-05-22 00:15:51">2024-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP"><img src="/img/NLP.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自然语言处理NLP"/></a><div class="content"><a class="title" href="/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP">自然语言处理NLP</a><time datetime="2024-05-20T03:06:28.000Z" title="发表于 2024-05-20 11:06:28">2024-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用"><img src="/img/njjk.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="脑机接口在神经康复中的应用"/></a><div class="content"><a class="title" href="/2024/05/19/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%9C%A8%E7%A5%9E%E7%BB%8F%E5%BA%B7%E5%A4%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" title="脑机接口在神经康复中的应用">脑机接口在神经康复中的应用</a><time datetime="2024-05-19T13:12:05.000Z" title="发表于 2024-05-19 21:12:05">2024-05-19</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/super.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Surely</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="I,love,u" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
