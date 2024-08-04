@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>基于Transformer解决机器翻译任务 | 李潇的博客</title><meta name="author" content="Surely"><meta name="copyright" content="Surely"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、Transformer 介绍基于循环或卷积神经网络的序列到序列建模方法是现存机器翻译任务中的经典方法。然而，它们在建模文本长程依赖方面都存在一定的局限性。  对于卷积神经网络来说，受限的上下文窗口在建模长文本方面天然地存在不足。如果要对长距离依赖进行描述，需要多层卷积操作，而且不同层之间信息传递也可能有损失，这些都限制了模型的能力。  而对于循环神经网络来说，上下文的语义依赖是通过维护循环单元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Transformer解决机器翻译任务">
+<meta property="og:url" content="http://example.com/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/index.html">
+<meta property="og:site_name" content="李潇的博客">
+<meta property="og:description" content="一、Transformer 介绍基于循环或卷积神经网络的序列到序列建模方法是现存机器翻译任务中的经典方法。然而，它们在建模文本长程依赖方面都存在一定的局限性。  对于卷积神经网络来说，受限的上下文窗口在建模长文本方面天然地存在不足。如果要对长距离依赖进行描述，需要多层卷积操作，而且不同层之间信息传递也可能有损失，这些都限制了模型的能力。  而对于循环神经网络来说，上下文的语义依赖是通过维护循环单元">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/transformer.jpg">
+<meta property="article:published_time" content="2024-08-04T12:33:22.000Z">
+<meta property="article:modified_time" content="2024-08-04T13:23:36.792Z">
+<meta property="article:author" content="Surely">
+<meta property="article:tag" content="NLP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/transformer.jpg"><link rel="shortcut icon" href="/img/heart.png"><link rel="canonical" href="http://example.com/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基于Transformer解决机器翻译任务',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-04 21:23:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/transformer.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="李潇的博客"><span class="site-name">李潇的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基于Transformer解决机器翻译任务</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-04T12:33:22.000Z" title="发表于 2024-08-04 20:33:22">2024-08-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-04T13:23:36.792Z" title="更新于 2024-08-04 21:23:36">2024-08-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="基于Transformer解决机器翻译任务"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、Transformer-介绍"><a href="#一、Transformer-介绍" class="headerlink" title="一、Transformer 介绍"></a>一、Transformer 介绍</h2><p>基于<strong>循环</strong>或<strong>卷积</strong>神经网络的序列到序列建模方法是现存机器翻译任务中的经典方法。然而，它们在<strong>建模文本长程依赖方面都存在一定的局限性</strong>。</p>
+<ul>
+<li><p>对于<strong>卷积神经网络</strong>来说，受限的上下文窗口在建模长文本方面天然地存在不足。如果要对长距离依赖进行描述，需要多层卷积操作，而且不同层之间信息传递也可能有损失，这些都限制了模型的能力。</p>
+</li>
+<li><p>而对于<strong>循环神经网络</strong>来说，上下文的语义依赖是通过维护循环单元中的隐状态实现的。在编码过程中，每一个时间步的输入建模都涉及到对隐藏状态的修改。随着序列长度的增加，编码在隐藏状态中的序列早期的上下文信息被逐渐遗忘。尽管注意力机制的引入在一定程度上缓解了这个问题，但循环网络在编码效率方面仍存在很大的不足之处。由于编码端和解码端的每一个时间步的隐藏状态都依赖于前一时间步的计算结果，这就造成了在训练和推断阶段的低效。</p>
+</li>
+</ul>
+<p><img src="/img/8.5.1.png" alt="Lena"></p>
+<p>为了更好地描述文字序列，谷歌的研究人员在 2017 年提出了一种新的模型 Transformer，学有余力的同学可以阅读一下原论文《Attention Is All You Need》，也可以直接看李沐老师的B站讲解：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click&vd_source=57d58ebb10da27d2a5cc9f4134efb2b8">Transformer论文逐段精读【论文精读】_哔哩哔哩_bilibili</a></p>
+<p>Transformer 在原论文中第一次提出就是将其应用到<strong>机器翻译</strong>领域，它的出现使得机器翻译的性能和效率迈向了一个新的阶段。它摒弃了循环结构，并完全通过<strong>注意力机制完成对源语言序列和目标语言序列全局依赖的建模</strong>。在<strong>抽取每个单词的上下文特征时，Transformer 通过自注意力机制（self-attention）衡量上下文中每一个单词对当前单词的重要程度。</strong></p>
+<p>  <img src="/img/8.5.2.png" alt="Lena"></p>
+<p>在这个过程当中没有任何的循环单元参与计算。这种<strong>高度可并行化</strong>的编码过程使得模型的运行变得十分高效。当前几乎<strong>大部分的大语言模型都是基于 Transformer 结构</strong>，本节以应用于机器翻译的基于Transformer 的编码器和解码器介绍该模型。</p>
+<p>Transformer的主要组件包括<strong>编码器(Encoder)、解码器(Decoder)和注意力层</strong>。其核心是利用<strong>多头自注意力机制（Multi-Head Self-Attention）</strong>，使每个位置的表示不仅依赖于当前位置，还能够直接获取其他位置的表示。自从提出以来，Transformer模型在机器翻译、文本生成等自然语言处理任务中均取得了突破性进展，成为NLP领域新的主流模型。</p>
+<p><strong>Transformer 是各种笔试面试中必考的一个地方，里面设计的考点很多，建议大家要好好学哦！</strong></p>
+<p>学完之后可以尝试回答以下20道题：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51879931/article/details/134142492">https://blog.csdn.net/m0_51879931/article/details/134142492</a></p>
+<p>下图展示了 Transformer 模型的基本架构:<br><img src="/img/8.5.3.png" alt="Lena"></p>
+<p>从宏观角度来看，Transformer的编码器是由多个相同的层叠加而成的，每个层都有两个子层（子层表示为sublayer）。第⼀个子层是<strong>多头自注意力（multi-head self-attention）汇聚</strong>；第二个子层是<strong>基于位置的前馈网络（positionwise feed-forward network）</strong>。主要涉及到如下几个模块：</p>
+<h3 id="嵌入表示层"><a href="#嵌入表示层" class="headerlink" title="嵌入表示层"></a><strong>嵌入表示层</strong></h3><p>对于输入文本序列，先通过一个输入嵌入层（Input Embedding）<strong>将每个单词转换为其相对应的向量表示</strong>。通常直接对每个单词创建一个向量表示。由于 Transfomer 模型不再使用基于循环的方式建模文本输入，序列中不再有任何信息能够提示模型单词之间的相对位置关系。在送入编码器端建模其上下文语义之前，一个非常重要的操作是<strong>在词嵌入中加入位置编码（Positional Encoding）这一特征</strong>。具体来说，序列中每一个单词所在的位置都对应一个向量。这一向量会与单词表示对应相加并送入到后续模块中做进一步处理。在训练的过程当中，模型会自动地学习到如何利用这部分位置信息。为了得到不同位置对应的编码，Transformer 模型使用<strong>不同频率的正余弦函数</strong>如下所示：</p>
+<p><img src="/img/8.5.4.png" alt="Lena"></p>
+<p>其中，pos 表示单词所在的位置，2i 和 2i+1 表示位置编码向量中的对应维度，d则对应位置编码的总维度。<br>通过上面这种方式计算位置编码有这样几个好处：</p>
+<ul>
+<li><p>首先，正余弦函数的范围是在 [-1,+1]，导出的<strong>位置编码与原词嵌入相加不会使得结果偏离过远而破坏原有单词的语义信息</strong>。</p>
+</li>
+<li><p>其次，依据三角函数的基本性质，可以得知<strong>第</strong>pos+k <strong>个位置的编码是第</strong> pos <strong>个位置的编码的线性组合，这就意味着位置编码中蕴含着单词之间的距离信息</strong>。</p>
+</li>
+</ul>
+<p><img src="/img/8.5.6.png" alt="Lena"></p>
+<p>位置编码的维度和词嵌入向量的维度相同（ 均为 d_model），模型通过将二者相加作为模型输入</p>
+<h3 id="注意力层"><a href="#注意力层" class="headerlink" title="注意力层"></a><strong>注意力层</strong></h3><p>自注意力（Self-Attention）操作是基于 Transformer 的机器翻译模型的基本操作，在源语言的编码和目标语言的生成中频繁地被使用以建模源语言、目标语言任意两个单词之间的依赖关系。给定由单词语义嵌入及其位置编码叠加得到的输入表示</p>
+<p>{xi∈Rd}i&#x3D;1t{x_{i} \in \mathbb{R}^{d}}_{i&#x3D;1}^{t}{xi​∈Rd}i&#x3D;1t​，</p>
+<p>为了实现对上下文语义依赖的建模，进一步引入在自注意力机制中涉及到的三个元素：查询 qiq_{i}qi​（Query），键 kik_{i}ki​（Key），值 viv_{i}vi​（Value）。在编码输入序列中每一个单词的表示的过程中，这三个元素用于计算上下文单词所对应的权重得分。直观地说，这些权重反映了在编码当前单词的表示时，对于上下文不同部分所需要的关注程度。</p>
+<p>为了得到编码单词 xix_{i}xi​ 时所需要关注的上下文信息，通过位置 iii 查询向量与其他位置的键向量做点积得到匹配分数</p>
+<p>qi⋅k1,qi⋅k2,…,qi⋅ktq_{i} \cdot k_{1}, q_{i} \cdot k_{2}, \ldots, q_{i} \cdot k_{t}qi​⋅k1​,qi​⋅k2​,…,qi​⋅kt​。</p>
+<p>为了防止过大的匹配分数在后续 Softmax 计算过程中导致的梯度爆炸以及收敛效率差的问题，这些得分会除以放缩因子 d\sqrt{d} d​ 以稳定优化。放缩后的得分经过 Softmax 归一化为概率之后，与其他位置的值向量相乘来聚合希望关注的上下文信息，并最小化不相关信息的干扰。上述计算过程可以被形式化地表述如下：</p>
+<p>Z&#x3D;Attention(Q,K,V)&#x3D;Softmax(QKTd)VZ &#x3D; \text{Attention}(Q, K, V) &#x3D; \text{Softmax}\left(\frac{QK^{T}}{\sqrt{d}}\right)VZ&#x3D;Attention(Q,K,V)&#x3D;Softmax(d​QKT​)V</p>
+<p>其中 Q∈RL×dqQ \in \mathbb{R}^{L \times d_{q}}Q∈RL×dq​，K∈RL×dkK \in \mathbb{R}^{L \times d_{k}}K∈RL×dk​，V∈RL×dvV \in \mathbb{R}^{L \times d_{v}}V∈RL×dv​ 分别表示输入序列中的不同单词的 q,k,vq, k, vq,k,v 向量拼接组成的矩阵，LLL 表示序列长度，Z∈RL×dvZ \in \mathbb{R}^{L \times d_{v}}Z∈RL×dv​ 表示自注意力操作的输出。</p>
+<h3 id="前馈层"><a href="#前馈层" class="headerlink" title="前馈层"></a>前馈层</h3><p>前馈层接受自注意力子层的输出作为输入，并通过一个带有 Relu 激活函数的两层全连接网络对输入进行更加复杂的非线性变换。实验证明，这一非线性变换会对模型最终的性能产生十分重要的影响。</p>
+<p>FFN(x)&#x3D;Relu(xW1+b1)W2+b2FFN(x) &#x3D; \text{Relu}(xW_{1} + b_{1})W_{2} + b_{2}FFN(x)&#x3D;Relu(xW1​+b1​)W2​+b2​</p>
+<p>其中 W1,b1,W2,b2W_{1}, b_{1}, W_{2}, b_{2}W1​,b1​,W2​,b2​ 表示前馈子层的参数。另外，以往的训练发现，增大前馈子层隐状态的维度有利于提升最终翻译结果的质量，因此，前馈子层隐状态的维度一般比自注意力子层要大。</p>
+<h3 id="残差连接与层归一化"><a href="#残差连接与层归一化" class="headerlink" title="残差连接与层归一化"></a>残差连接与层归一化</h3><p>由 Transformer 结构组成的网络结构通常都是非常庞大。编码器和解码器均由很多层基本的 Transformer 块组成，每一层当中都包含复杂的非线性映射，这就导致模型的训练比较困难。因此，研究者们在 Transformer 块中进一步引入了残差连接与层归一化技术以进一步提升训练的稳定性。具体来说，残差连接主要是指使用一条直连通道直接将对应子层的输入连接到输出上去，从而避免由于网络过深在优化过程中潜在的梯度消失问题：</p>
+<p>xl+1&#x3D;f(xl)+xlx^{l+1} &#x3D; f(x^l) + x^lxl+1&#x3D;f(xl)+xl</p>
+<p>其中 xlx^lxl 表示第 lll 层的输入，f(⋅)f(\cdot)f(⋅) 表示一个映射函数。此外，为了进一步使得每一层的输入输出范围稳定在一个合理的范围内，层归一化技术被进一步引入每个 Transformer 块的当中：</p>
+<p>LN(x)&#x3D;α⋅x−μσ+bLN(x) &#x3D; \alpha \cdot \frac{x - \mu}{\sigma} + bLN(x)&#x3D;α⋅σx−μ​+b</p>
+<p>其中 μ\muμ 和 σ\sigmaσ 分别表示均值和方差，用于将数据平移缩放到均值为 0，方差为 1 的标准分布，α\alphaα 和 bbb 是可学习的参数。层归一化技术可以有效地缓解优化过程中潜在的不稳定、收敛速度慢等问题。</p>
+<h3 id="编码器和解码器结构"><a href="#编码器和解码器结构" class="headerlink" title="编码器和解码器结构"></a><strong>编码器和解码器结构</strong></h3><p>根据给出的网络架构，编码器端可以较为容易实现。但相比于编码器端，解码器端要更复杂一些。具体来说，解码器的每个 Transformer 块的第一个自注意力子层额外增加了注意力掩码，对应图中的掩码多头注意力（Masked Multi-Head Attention）部分。这主要是因为在翻译的过程中，编码器端主要用于编码源语言序列的信息，而这个序列是完全已知的，因而编码器仅需要考虑如何融合上下文语义信息即可。而解码端则负责生成目标语言序列，这一生成过程是<strong>自回归</strong>的，即对于每一个单词的生成过程，仅有当前单词之前的目标语言序列是可以被观测的，因此这一额外<strong>增加的掩码是用来掩盖后续的文本信息，以防模型在训练阶段直接看到后续的文本序列进而无法得到有效地训练</strong>。</p>
+<p>此外，解码器端还额外增加了一个<strong>多头注意力（Multi-Head Attention）模块</strong>，使用交叉注意力（Cross-attention）方法，同时接收来自编码器端的输出以及当前 Transformer 块的前一个掩码注意力层的输出。查询是通过解码器前一层的输出进行投影的，而键和值是使用编码器的输出进行投影的。它的作用是在翻译的过程当中，为了生成合理的目标语言序列需要观测待翻译的源语言序列是什么。基于上述的编码器和解码器结构，待翻译的源语言文本，先经过编码器端的每个Transformer 块对其上下文语义的层层抽象，然后输出每一个源语言单词上下文相关的表示。解码器端以自回归的方式生成目标语言文本，即在每个时间步 t ，根据编码器端输出的源语言文本表示，以及前 t-1 个时刻生成的目标语言文本，生成当前时刻的目标语言单词。</p>
+<h2 id="二、基于-task2-的-baseline-修改代码"><a href="#二、基于-task2-的-baseline-修改代码" class="headerlink" title="二、基于 task2 的 baseline 修改代码"></a>二、基于 task2 的 baseline 修改代码</h2><p>我们还是以 task2 给出的 baseline 代码为基础，进行修改，主要修改模型结构部分的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 位置编码</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PositionalEncoding</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, d_model, dropout=<span class="number">0.1</span>, max_len=<span class="number">5000</span></span>):</span><br><span class="line">        <span class="built_in">super</span>(PositionalEncoding, self).__init__()</span><br><span class="line">        self.dropout = nn.Dropout(p=dropout)</span><br><span class="line"></span><br><span class="line">        pe = torch.zeros(max_len, d_model)</span><br><span class="line">        position = torch.arange(<span class="number">0</span>, max_len, dtype=torch.<span class="built_in">float</span>).unsqueeze(<span class="number">1</span>)</span><br><span class="line">        div_term = torch.exp(torch.arange(<span class="number">0</span>, d_model, <span class="number">2</span>).<span class="built_in">float</span>() * (-math.log(<span class="number">10000.0</span>) / d_model))</span><br><span class="line">        pe[:, <span class="number">0</span>::<span class="number">2</span>] = torch.sin(position * div_term)</span><br><span class="line">        pe[:, <span class="number">1</span>::<span class="number">2</span>] = torch.cos(position * div_term)</span><br><span class="line">        pe = pe.unsqueeze(<span class="number">0</span>).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;pe&#x27;</span>, pe)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        x = x + self.pe[:x.size(<span class="number">0</span>), :]</span><br><span class="line">        <span class="keyword">return</span> self.dropout(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Transformer</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TransformerModel</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, src_vocab, tgt_vocab, d_model, nhead, num_encoder_layers, num_decoder_layers, dim_feedforward, dropout</span>):</span><br><span class="line">        <span class="built_in">super</span>(TransformerModel, self).__init__()</span><br><span class="line">        self.transformer = nn.Transformer(d_model, nhead, num_encoder_layers, num_decoder_layers, dim_feedforward, dropout)</span><br><span class="line">        self.src_embedding = nn.Embedding(<span class="built_in">len</span>(src_vocab), d_model)</span><br><span class="line">        self.tgt_embedding = nn.Embedding(<span class="built_in">len</span>(tgt_vocab), d_model)</span><br><span class="line">        self.positional_encoding = PositionalEncoding(d_model, dropout)</span><br><span class="line">        self.fc_out = nn.Linear(d_model, <span class="built_in">len</span>(tgt_vocab))</span><br><span class="line">        self.src_vocab = src_vocab</span><br><span class="line">        self.tgt_vocab = tgt_vocab</span><br><span class="line">        self.d_model = d_model</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, src, tgt</span>):</span><br><span class="line">        <span class="comment"># 调整src和tgt的维度</span></span><br><span class="line">        src = src.transpose(<span class="number">0</span>, <span class="number">1</span>)  <span class="comment"># (seq_len, batch_size)</span></span><br><span class="line">        tgt = tgt.transpose(<span class="number">0</span>, <span class="number">1</span>)  <span class="comment"># (seq_len, batch_size)</span></span><br><span class="line"></span><br><span class="line">        src_mask = self.transformer.generate_square_subsequent_mask(src.size(<span class="number">0</span>)).to(src.device)</span><br><span class="line">        tgt_mask = self.transformer.generate_square_subsequent_mask(tgt.size(<span class="number">0</span>)).to(tgt.device)</span><br><span class="line"></span><br><span class="line">        src_padding_mask = (src == self.src_vocab[<span class="string">&#x27;&lt;pad&gt;&#x27;</span>]).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        tgt_padding_mask = (tgt == self.tgt_vocab[<span class="string">&#x27;&lt;pad&gt;&#x27;</span>]).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        src_embedded = self.positional_encoding(self.src_embedding(src) * math.sqrt(self.d_model))</span><br><span class="line">        tgt_embedded = self.positional_encoding(self.tgt_embedding(tgt) * math.sqrt(self.d_model))</span><br><span class="line"></span><br><span class="line">        output = self.transformer(src_embedded, tgt_embedded,</span><br><span class="line">                                  src_mask, tgt_mask, <span class="literal">None</span>, src_padding_mask, tgt_padding_mask, src_padding_mask)</span><br><span class="line">        <span class="keyword">return</span> self.fc_out(output).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>然后在主函数里定义 Transformer 模型调用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model = TransformerModel(src_vocab, tgt_vocab, d_model, nhead, num_encoder_layers, num_decoder_layers, dim_feedforward, dropout)</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Surely</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/">http://example.com/2024/08/04/基于Transformer解决机器翻译任务/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">李潇的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/NLP/">NLP</a></div><div class="post_share"><div class="social-share" data-image="/img/transformer.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/08/04/NLP%E5%85%A5%E9%97%A8/" title="NLP入门"><img class="cover" src="/img/8-4nlp.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">NLP入门</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/08/04/NLP%E5%85%A5%E9%97%A8/" title="NLP入门"><img class="cover" src="/img/8-4nlp.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-04</div><div class="title">NLP入门</div></div></a></div><div><a href="/2024/05/20/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP"><img class="cover" src="/img/NLP.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-20</div><div class="title">自然语言处理NLP</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODQyMS8zNDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Surely</div><div class="author-info__description">新的开始，欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lixiao2024" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1290059235@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.surelylee2048.com.cn" target="_blank" title="博客"><i class="fab fa-algolia"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Transformer-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">一、Transformer 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%85%A5%E8%A1%A8%E7%A4%BA%E5%B1%82"><span class="toc-number">1.1.</span> <span class="toc-text">嵌入表示层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%B1%82"><span class="toc-number">1.2.</span> <span class="toc-text">注意力层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E9%A6%88%E5%B1%82"><span class="toc-number">1.3.</span> <span class="toc-text">前馈层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%8B%E5%B7%AE%E8%BF%9E%E6%8E%A5%E4%B8%8E%E5%B1%82%E5%BD%92%E4%B8%80%E5%8C%96"><span class="toc-number">1.4.</span> <span class="toc-text">残差连接与层归一化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E5%99%A8%E5%92%8C%E8%A7%A3%E7%A0%81%E5%99%A8%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.</span> <span class="toc-text">编码器和解码器结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E4%BA%8E-task2-%E7%9A%84-baseline-%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">二、基于 task2 的 baseline 修改代码</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/" title="基于Transformer解决机器翻译任务"><img src="/img/transformer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Transformer解决机器翻译任务"/></a><div class="content"><a class="title" href="/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/" title="基于Transformer解决机器翻译任务">基于Transformer解决机器翻译任务</a><time datetime="2024-08-04T12:33:22.000Z" title="发表于 2024-08-04 20:33:22">2024-08-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/04/NLP%E5%85%A5%E9%97%A8/" title="NLP入门"><img src="/img/8-4nlp.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="NLP入门"/></a><div class="content"><a class="title" href="/2024/08/04/NLP%E5%85%A5%E9%97%A8/" title="NLP入门">NLP入门</a><time datetime="2024-08-04T12:31:52.000Z" title="发表于 2024-08-04 20:31:52">2024-08-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/" title="超算简介"><img src="/img/super.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="超算简介"/></a><div class="content"><a class="title" href="/2024/05/29/%E8%B6%85%E7%AE%97%E7%AE%80%E4%BB%8B/" title="超算简介">超算简介</a><time datetime="2024-05-29T00:32:02.000Z" title="发表于 2024-05-29 08:32:02">2024-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/28/hexo%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86/" title="hexo框架原理"><img src="/img/hexokj.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo框架原理"/></a><div class="content"><a class="title" href="/2024/05/28/hexo%E6%A1%86%E6%9E%B6%E5%8E%9F%E7%90%86/" title="hexo框架原理">hexo框架原理</a><time datetime="2024-05-28T14:01:42.000Z" title="发表于 2024-05-28 22:01:42">2024-05-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/22/Web3%E4%BB%8B%E7%BB%8D/" title="Web3介绍"><img src="/img/Web3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Web3介绍"/></a><div class="content"><a class="title" href="/2024/05/22/Web3%E4%BB%8B%E7%BB%8D/" title="Web3介绍">Web3介绍</a><time datetime="2024-05-21T16:15:51.000Z" title="发表于 2024-05-22 00:15:51">2024-05-22</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/transformer.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Surely</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="I,love,u" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
