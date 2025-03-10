@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大模型基础 | 李潇的博客</title><meta name="author" content="Surely"><meta name="copyright" content="Surely"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大模型基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大模型基础">
+<meta property="og:url" content="http://example.com/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="李潇的博客">
+<meta property="og:description" content="大模型基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/813.jpg">
+<meta property="article:published_time" content="2025-03-10T12:52:59.000Z">
+<meta property="article:modified_time" content="2025-03-10T14:17:50.464Z">
+<meta property="article:author" content="Surely">
+<meta property="article:tag" content="大模型系列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/813.jpg"><link rel="shortcut icon" href="/img/heart.png"><link rel="canonical" href="http://example.com/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '大模型基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-10 22:17:50'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/813.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="李潇的博客"><span class="site-name">李潇的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大模型基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-10T12:52:59.000Z" title="发表于 2025-03-10 20:52:59">2025-03-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-10T14:17:50.464Z" title="更新于 2025-03-10 22:17:50">2025-03-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">大模型</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="大模型基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="大语言模型发展与应用全景解析"><a href="#大语言模型发展与应用全景解析" class="headerlink" title="大语言模型发展与应用全景解析"></a>大语言模型发展与应用全景解析</h1><hr>
+<h2 id="语言模型发展历程"><a href="#语言模型发展历程" class="headerlink" title="语言模型发展历程"></a>语言模型发展历程</h2><h3 id="早期统计语言模型（1950s-2000s）"><a href="#早期统计语言模型（1950s-2000s）" class="headerlink" title="早期统计语言模型（1950s-2000s）"></a>早期统计语言模型（1950s-2000s）</h3><ul>
+<li>​<strong>规则系统探索</strong><br>1966年MIT开发的首个聊天机器人ELIZA采用模式匹配规则<a href="@ref">1</a>，1970年代SHRDLU系统展示早期语义理解能力，但依赖人工规则编写<a href="@ref">1</a>。</li>
+<li>​<strong>统计方法兴起</strong><br>1990年代n-gram模型通过计算n元词组联合概率预测文本，隐马尔可夫模型（HMM）推动语音识别发展<a href="@ref">2</a>。此时模型受限于语料库规模（通常仅百万级）和长距离依赖捕捉能力<a href="@ref">3</a>。</li>
+</ul>
+<p>统计语言模型（Statistical Language Model, SLM）. 在 20 世纪 90 年代兴起的统计语言模型 [4, 5] 是基于统计学习方法研发的。具体来说，统计语言模型使用马尔可夫假设（Markov Assumption）来建立语言序列的预测模型，通常是根据词序列中若干个连续的上下文单词来预测下一个词的出现概率，即根据一个固定长度的前缀来预测目标单词。具有固定上下文长度 𝑛 的统计语言模型通常被称为 𝑛 元（𝑛-gram）语言模型，如二元或三元语言模型。统计语言模型被广泛应用于信息检索<br>（Information Retrieval, IR）和自然语言处理（Natural Language Processing, NLP）等领域的早期研究工作。对于高阶统计语言模型来说，随着阶数 𝑛 的增加，需要估计的转移概率项数将会指数级增长，经常会受到“维数灾难”（Curse of Dimensionality）的困扰。为了缓解数据稀疏问题，需要设计专门的语言模型平滑策略，如回退估计（Back-off Estimation）和古德-图灵估计（Good-Turing Estimation）。然而平滑方法对于高阶上下文的刻画能力仍然较弱，无法精确建模复杂的高阶语义关系。</p>
+<h3 id="神经网络语言模型（2010-2017）"><a href="#神经网络语言模型（2010-2017）" class="headerlink" title="神经网络语言模型（2010-2017）"></a>神经网络语言模型（2010-2017）</h3><ul>
+<li>​<strong>词向量革命</strong><br>Google 2013年提出Word2Vec，通过Skip-gram&#x2F;CBOW算法实现语义向量化，突破传统词袋模型局限<a href="@ref">2,4</a>。</li>
+<li>​<strong>序列模型演进</strong><br>LSTM（1997提出，2010s普及）解决RNN梯度消失问题，支持200+词距记忆<a href="@ref">1</a>；2015年Seq2Seq架构推动机器翻译突破<a href="@ref">2</a>。</li>
+</ul>
+<p>神经语言模型（Neural Language Model, NLM）. 神经语言模型 [6, 7] 使用神经网络来建模文本序列的生成，如循环神经网络（Recurrent Neural Networks, RNN）。图1.1 语言模型的发展历程灵奖获得者 Yoshua Bengio 在一项早期工作中 [6] 引入了分布式词表示（DistributedWordRepresentation）这一概念，并构建了基于聚合上下文特征（即分布式词向量）的目标词预测函数。分布式词表示使用低维稠密向量来表示词汇的语义，这与基于词典空间的稀疏词向量表示（One-Hot Representation）有着本质的不同，能够刻画更为丰富的隐含语义特征。同时，稠密向量的非零表征对于复杂语言模型的搭建非常友好，能够有效克服统计语言模型中的数据稀疏问题。分布式词向量又称为“词嵌入”（Word Embedding）。这种基于隐含语义特征表示的语言建模方法为自然语言处理任务提供了一种较为通用的解决途径。在这一系列工作中，word2vec [8,9] 是一个具有代表性的词嵌入学习模型，它构建了一个简化的浅层神经网络来学习分布式词表示，所学习到的词嵌入可以用作后续任务的语义特征提取器，在自然语言处理任务中得到了广泛使用，取得了显著的性能提升。这些创新性的研究工作将语言模型用于文本表示学习（超越了原始的词序列建模目标），在自然语言<br>处理领域产生了重要影响。<br><img src="/img/LLM-img1.png" alt="Lena"></p>
+<h3 id="Transformer与预训练模型（2017-2019）"><a href="#Transformer与预训练模型（2017-2019）" class="headerlink" title="Transformer与预训练模型（2017-2019）"></a>Transformer与预训练模型（2017-2019）</h3><ul>
+<li>​<strong>架构革命</strong><br>2017年Transformer通过多头自注意力机制实现全局依赖捕捉，训练速度比LSTM快10倍<a href="@ref">4,9</a>。BERT（2018）采用掩码语言模型（MLM）实现双向理解，GLUE基准分数提升7%-15%<a href="@ref">1,3</a>。</li>
+<li>​<strong>预训练范式确立</strong><br>GPT-1（2018）首次验证自回归预训练有效性，T5（2019）统一NLP任务为text-to-text框架<a href="@ref">3,6</a>。<br><img src="/img/LLM-img2.png" alt="Lena"><br>且不容易并行训练，这些缺点限制了早期预训练模型（如 ELMo）的性能。在 2017年，谷歌提出了基于自注意力机制（Self-Attention）的 Transformer 模型 [12]，通过自注意力机制建模长程序列关系。Transformer 的一个主要优势就是其模型设计对于硬件非常友好，可以通过 GPU 或者 TPU 进行加速训练，这为研发大语言模型提供了可并行优化的神经网络架构。基于 Transformer 架构，谷歌进一步提出了预训练语言模型 BERT [13]，采用了仅有编码器的 Transformer 架构，并通过在大规模<br>无标注数据上使用专门设计的预训练任务来学习双向语言模型。在同期，OpenAI也迅速采纳了 Transformer 架构，将其用于 GPT-1 [14] 的训练。与 BERT 模型不同的是，GPT-1 采用了仅有解码器的 Transformer 架构，以及基于下一个词元预测的预训练任务进行模型的训练。一般来说，编码器架构被认为更适合去解决自然语言理解任务（如完形填空等），而解码器架构更适合解决自然语言生成任务（如文本摘要等）。以 ELMo、BERT、GPT-1 为代表的预训练语言模型确立了“预训练-微<br>调”这一任务求解范式。其中，预训练阶段旨在通过大规模无标注文本建立模型的基础能力，而微调阶段则使用有标注数据对于模型进行特定任务的适配，从而更好地解决下游的自然语言处理任务。</li>
+</ul>
+<h3 id="大语言模型时代（2020-至今）"><a href="#大语言模型时代（2020-至今）" class="headerlink" title="大语言模型时代（2020-至今）"></a>大语言模型时代（2020-至今）</h3><ul>
+<li><p>​<strong>规模跃迁</strong><br>GPT-3（2020）达1750亿参数，零样本任务准确率较GPT-2提升40%<a href="@ref">5</a>；PaLM（2022）5400亿参数实现复杂数学推理<a href="@ref">12</a>。</p>
+</li>
+<li><p>​<strong>能力涌现</strong><br>GPT-4（2023）在Bar考试中超越90%人类考生，DeepSeek-R1（2025）支持128K上下文窗口和671B参数<a href="@ref">4,6</a>。</p>
+</li>
+<li><p>​<strong>开源生态</strong><br>LLaMA（2023）、ChatGLM（清华）等模型推动技术民主化，Qwen2.5支持1M token超长文本处理<a href="@ref">6,10</a>。</p>
+</li>
+<li><p><strong>具有较为丰富的世界知识</strong>： 与传统机器学习模型相比，大语言模型经过超大<br>规模文本数据的预训练后能够学习到较为丰富的世界知识。</p>
+</li>
+<li><p><strong>具有较强的通用任务解决能力</strong> ：大语言模型第二个代表性的能力特点是具有<br>较强的通用任务求解能力。</p>
+</li>
+<li><p><strong>具有较好的复杂任务推理能力</strong>. 除了具有通用性外，大语言模型在复杂任务<br>中还展现出了较好的推理能力。</p>
+</li>
+<li><p><strong>具有较强的人类指令遵循能力</strong>： 大语言模型建立了自然语言形式的统一任务<br>解决模式：任务输入与执行结果均通过自然语言进行表达。</p>
+</li>
+<li><p><strong>具有较好的人类对齐能力</strong>. 机器学习模型的安全性一直以来是一个重要的研<br>究课题。</p>
+</li>
+<li><p><strong>具有可拓展的工具使用能力</strong>：在机器学习领域，模型的设计和实现往往都具<br>有一定的局限性，例如会受到所采用的归纳假设以及训练数据的限制。<br>规模文本数据的预训练后能够学习到较为丰富的世界知识。</p>
+</li>
+</ul>
+<hr>
+<h2 id="大语言模型核心特点"><a href="#大语言模型核心特点" class="headerlink" title="大语言模型核心特点"></a>大语言模型核心特点</h2><h3 id="超大规模参数体系"><a href="#超大规模参数体系" class="headerlink" title="超大规模参数体系"></a>超大规模参数体系</h3><ul>
+<li>GPT-4达1.8万亿参数，DeepSeek-R1突破670B<a href="@ref">6,13</a></li>
+<li>参数增长规律：性能随参数量呈幂律分布，每10倍参数带来3%-5%准确率提升<a href="@ref">7</a></li>
+</ul>
+<h3 id="训练范式创新"><a href="#训练范式创新" class="headerlink" title="训练范式创新"></a>训练范式创新</h3><ul>
+<li>自监督预训练：使用TB级文本数据，通过MLM&#x2F;NSP任务构建语言先验知识<a href="@ref">8,9</a></li>
+<li>三阶段训练：预训练 → 监督微调 → RLHF对齐，ChatGPT采用超百万级人类反馈数据<a href="@ref">3,12</a></li>
+</ul>
+<h3 id="泛化与涌现能力"><a href="#泛化与涌现能力" class="headerlink" title="泛化与涌现能力"></a>泛化与涌现能力</h3><ul>
+<li>上下文学习（In-context Learning）：5-shot学习可使代码生成准确率从45%提升至78%<a href="@ref">3,13</a></li>
+<li>跨模态涌现：GPT-4V实现图文联合推理，医疗影像诊断准确率达91%<a href="@ref">12,13</a></li>
+</ul>
+<h3 id="多模态扩展"><a href="#多模态扩展" class="headerlink" title="多模态扩展"></a>多模态扩展</h3><ul>
+<li>视觉语言模型：BLIP-2通过Q-Former桥接视觉-语言特征空间<a href="@ref">8</a></li>
+<li>视频处理：Sora模型（2024）实现分钟级视频生成，时空注意力机制是关键突破<a href="@ref">13</a></li>
+</ul>
+<hr>
+<h2 id="关键技术突破"><a href="#关键技术突破" class="headerlink" title="关键技术突破"></a>关键技术突破</h2><h3 id="Transformer架构创新"><a href="#Transformer架构创新" class="headerlink" title="Transformer架构创新"></a>Transformer架构创新</h3><ul>
+<li>多头注意力机制：8-64个注意力头并行计算，捕获语法&#x2F;语义&#x2F;语用多维度特征<a href="@ref">4,9</a></li>
+<li>位置编码：相对位置编码（RoPE）提升长文本建模能力，支持32K+上下文<a href="@ref">6,10</a></li>
+</ul>
+<h3 id="训练优化技术"><a href="#训练优化技术" class="headerlink" title="训练优化技术"></a>训练优化技术</h3><ul>
+<li>混合并行训练：Megatron-LM实现3D并行（数据+流水线+张量并行），万卡集群效率&gt;90%<a href="@ref">8,13</a></li>
+<li>显存优化：ZeRO-Offload技术使单卡可训练130B模型<a href="@ref">8</a></li>
+</ul>
+<h3 id="对齐与安全"><a href="#对齐与安全" class="headerlink" title="对齐与安全"></a>对齐与安全</h3><ul>
+<li>RLHF技术：Proximal Policy Optimization（PPO）算法平衡多样性与安全性<a href="@ref">5,12</a></li>
+<li>Constitutional AI：通过AI监督实现价值观对齐，有害输出率降低10倍<a href="@ref">13</a></li>
+</ul>
+<h3 id="推理加速"><a href="#推理加速" class="headerlink" title="推理加速"></a>推理加速</h3><ul>
+<li>量化压缩：GPTQ算法实现4bit量化，精度损失&lt;1%<a href="@ref">6</a></li>
+<li>动态批处理：vLLM框架提升吞吐量3-5倍，支持连续批处理（Continuous Batching）<a href="@ref">8</a></li>
+</ul>
+<hr>
+<h2 id="对科技发展的革命性影响"><a href="#对科技发展的革命性影响" class="headerlink" title="对科技发展的革命性影响"></a>对科技发展的革命性影响</h2><h3 id="技术融合创新"><a href="#技术融合创新" class="headerlink" title="技术融合创新"></a>技术融合创新</h3><ul>
+<li>自动驾驶：Waymo融合语言模型实现自然语言交互式导航，意图识别准确率提升27%<a href="@ref">12</a></li>
+<li>科学计算：AlphaFold3（2024）结合语言模型提升蛋白质相互作用预测精度<a href="@ref">13</a></li>
+</ul>
+<h3 id="产业升级路径"><a href="#产业升级路径" class="headerlink" title="产业升级路径"></a>产业升级路径</h3><ul>
+<li>制造业：西门子工业大模型将设备维护工单生成效率提升60%<a href="@ref">11</a></li>
+<li>金融：彭博GPT（2023）实现财经报告自动生成，错误率低于人工撰写<a href="@ref">12</a></li>
+</ul>
+<h3 id="社会变革挑战"><a href="#社会变革挑战" class="headerlink" title="社会变革挑战"></a>社会变革挑战</h3><ul>
+<li>教育领域：可汗学院部署AI导师，学生数学成绩平均提升20%<a href="@ref">13</a></li>
+<li>伦理风险：2024年全球AI伪造内容检测需求激增300%，催生数字水印技术标准<a href="@ref">11</a></li>
+</ul>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Surely</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/">http://example.com/2025/03/10/大模型基础/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">李潇的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B3%BB%E5%88%97/">大模型系列</a></div><div class="post_share"><div class="social-share" data-image="/img/813.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"><img class="cover" src="/img/20250310.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODQyMS8zNDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Surely</div><div class="author-info__description">新的开始，欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lixiao2024" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1290059235@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.surelylee2048.com.cn" target="_blank" title="博客"><i class="fab fa-algolia"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E4%B8%8E%E5%BA%94%E7%94%A8%E5%85%A8%E6%99%AF%E8%A7%A3%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">大语言模型发展与应用全景解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">语言模型发展历程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A9%E6%9C%9F%E7%BB%9F%E8%AE%A1%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%881950s-2000s%EF%BC%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">早期统计语言模型（1950s-2000s）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%882010-2017%EF%BC%89"><span class="toc-number">1.1.2.</span> <span class="toc-text">神经网络语言模型（2010-2017）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transformer%E4%B8%8E%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%882017-2019%EF%BC%89"><span class="toc-number">1.1.3.</span> <span class="toc-text">Transformer与预训练模型（2017-2019）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%97%B6%E4%BB%A3%EF%BC%882020-%E8%87%B3%E4%BB%8A%EF%BC%89"><span class="toc-number">1.1.4.</span> <span class="toc-text">大语言模型时代（2020-至今）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">大语言模型核心特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%8F%82%E6%95%B0%E4%BD%93%E7%B3%BB"><span class="toc-number">1.2.1.</span> <span class="toc-text">超大规模参数体系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E8%8C%83%E5%BC%8F%E5%88%9B%E6%96%B0"><span class="toc-number">1.2.2.</span> <span class="toc-text">训练范式创新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%8C%96%E4%B8%8E%E6%B6%8C%E7%8E%B0%E8%83%BD%E5%8A%9B"><span class="toc-number">1.2.3.</span> <span class="toc-text">泛化与涌现能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E6%89%A9%E5%B1%95"><span class="toc-number">1.2.4.</span> <span class="toc-text">多模态扩展</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%AA%81%E7%A0%B4"><span class="toc-number">1.3.</span> <span class="toc-text">关键技术突破</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Transformer%E6%9E%B6%E6%9E%84%E5%88%9B%E6%96%B0"><span class="toc-number">1.3.1.</span> <span class="toc-text">Transformer架构创新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E4%BC%98%E5%8C%96%E6%8A%80%E6%9C%AF"><span class="toc-number">1.3.2.</span> <span class="toc-text">训练优化技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E9%BD%90%E4%B8%8E%E5%AE%89%E5%85%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">对齐与安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E7%90%86%E5%8A%A0%E9%80%9F"><span class="toc-number">1.3.4.</span> <span class="toc-text">推理加速</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E7%A7%91%E6%8A%80%E5%8F%91%E5%B1%95%E7%9A%84%E9%9D%A9%E5%91%BD%E6%80%A7%E5%BD%B1%E5%93%8D"><span class="toc-number">1.4.</span> <span class="toc-text">对科技发展的革命性影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E8%9E%8D%E5%90%88%E5%88%9B%E6%96%B0"><span class="toc-number">1.4.1.</span> <span class="toc-text">技术融合创新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E4%B8%9A%E5%8D%87%E7%BA%A7%E8%B7%AF%E5%BE%84"><span class="toc-number">1.4.2.</span> <span class="toc-text">产业升级路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E5%8F%98%E9%9D%A9%E6%8C%91%E6%88%98"><span class="toc-number">1.4.3.</span> <span class="toc-text">社会变革挑战</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/" title="大模型基础"><img src="/img/813.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型基础"/></a><div class="content"><a class="title" href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/" title="大模型基础">大模型基础</a><time datetime="2025-03-10T12:52:59.000Z" title="发表于 2025-03-10 20:52:59">2025-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"><img src="/img/20250310.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"/></a><div class="content"><a class="title" href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision">论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision</a><time datetime="2025-03-09T16:04:45.000Z" title="发表于 2025-03-10 00:04:45">2025-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/07/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction/" title="论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction"><img src="/img/20250307.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction"/></a><div class="content"><a class="title" href="/2025/03/07/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction/" title="论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction">论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction</a><time datetime="2025-03-07T06:02:45.000Z" title="发表于 2025-03-07 14:02:45">2025-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/13/%E5%85%B3%E4%BA%8E%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/" title="关于模型微调"><img src="/img/813.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于模型微调"/></a><div class="content"><a class="title" href="/2024/08/13/%E5%85%B3%E4%BA%8E%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/" title="关于模型微调">关于模型微调</a><time datetime="2024-08-13T14:24:01.000Z" title="发表于 2024-08-13 22:24:01">2024-08-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/" title="基于Transformer解决机器翻译任务"><img src="/img/transformer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Transformer解决机器翻译任务"/></a><div class="content"><a class="title" href="/2024/08/04/%E5%9F%BA%E4%BA%8ETransformer%E8%A7%A3%E5%86%B3%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E4%BB%BB%E5%8A%A1/" title="基于Transformer解决机器翻译任务">基于Transformer解决机器翻译任务</a><time datetime="2024-08-04T12:33:22.000Z" title="发表于 2024-08-04 20:33:22">2024-08-04</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/813.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Surely</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="I,love,u" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
