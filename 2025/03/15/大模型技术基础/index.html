@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大模型技术基础 | 李潇的博客</title><meta name="author" content="Surely"><meta name="copyright" content="Surely"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="从定义出发了解大模型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大模型技术基础">
+<meta property="og:url" content="http://example.com/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="李潇的博客">
+<meta property="og:description" content="从定义出发了解大模型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/813.jpg">
+<meta property="article:published_time" content="2025-03-15T12:39:27.000Z">
+<meta property="article:modified_time" content="2025-03-15T14:39:26.201Z">
+<meta property="article:author" content="Surely">
+<meta property="article:tag" content="大模型系列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/813.jpg"><link rel="shortcut icon" href="/img/heart.png"><link rel="canonical" href="http://example.com/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '大模型技术基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-15 22:39:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/813.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="李潇的博客"><span class="site-name">李潇的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大模型技术基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-15T12:39:27.000Z" title="发表于 2025-03-15 20:39:27">2025-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-15T14:39:26.201Z" title="更新于 2025-03-15 22:39:26">2025-03-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="大模型技术基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="大模型的构建预览"><a href="#大模型的构建预览" class="headerlink" title="大模型的构建预览"></a>大模型的构建预览</h1><p><strong>定义</strong>：通常是指具有超大规模参数的预训练语言模型<br><strong>架构</strong>：主要为Transformer解码器架构<br><strong>训练</strong>：主要分为预训练（base model） 后训练（instruct model）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A[预训练]--&gt;|海量文本数据 + 预测下一词| B(建立模型基础能力)</span><br><span class="line">B --&gt;|大量指令数据 + SFT/RL| C(增强模型的任务能力)</span><br><span class="line">C --&gt;|instruct model| D[下游应用]</span><br></pre></td></tr></table></figure>
+
+
+<p> <strong>预训练</strong>：使用与下游任务无关的大规模数据进行模型参数的初始训练。基于transformer解码器架构，进行下一个词预测。数据数量和质量都非常关键。<br> <strong>后训练</strong>：又分为两种：指令微调和人类对齐</p>
+<ul>
+<li><strong>指令微调</strong>：使用输入与输出配对的指令数据对于模型进行微调，提升模型通过问答形式进行任务求解的能力。<br>  <img src="/img/0315-1.png" alt="Lena"></li>
+<li><strong>人类对齐</strong>：将大语言模型与人类的期望、需求以及价值观对齐；基于人类反馈的强化学习方法 <strong>（RLHF）</strong></li>
+</ul>
+<p><img src="/img/0315-2.png" alt="Lena"></p>
+<h1 id="扩展定律基础概念"><a href="#扩展定律基础概念" class="headerlink" title="扩展定律基础概念"></a>扩展定律基础概念</h1><p>扩展定律（Scaling Law）揭示了语言模型性能与模型规模、数据量及计算资源之间的数学关系，其核心是<strong>幂律法则</strong>​（Power Law）。随着模型参数量（N）、训练数据量（D）和计算量（C）的增加，模型损失（Loss）呈现指数级下降，但边际效益逐渐递减。<br><strong>通过扩展参数规模、数据规模和计算能力，大语言模型的能力会出现显著提升，扩展定律在本次大模型浪潮中起到了重要作用。</strong><br><img src="/img/0315-3.png" alt="Lena"></p>
+<h2 id="​核心公式："><a href="#​核心公式：" class="headerlink" title="​核心公式："></a>​<strong>核心公式</strong>：</h2><p>$L(N,D)&#x3D;L_0​+k⋅N^{−α}+m⋅D^{−β}$</p>
+<ul>
+<li>​<strong>L0​</strong>：数据固有噪声带来的不可约损失</li>
+<li>​<strong>α 和 β</strong>：参数和数据对损失的衰减系数（通常 α≈0.07, β≈0.27）</li>
+</ul>
+<hr>
+<h2 id="KM扩展定律与Chinchilla扩展定律对比"><a href="#KM扩展定律与Chinchilla扩展定律对比" class="headerlink" title="KM扩展定律与Chinchilla扩展定律对比"></a>KM扩展定律与Chinchilla扩展定律对比</h2><h3 id="​KM扩展定律（OpenAI-2020）​"><a href="#​KM扩展定律（OpenAI-2020）​" class="headerlink" title="​KM扩展定律（OpenAI, 2020）​"></a>​<strong>KM扩展定律（OpenAI, 2020）​</strong></h3><ul>
+<li>​<strong>核心发现</strong>：在计算预算约束下，优先扩大模型参数（N）而非数据量（D），参数增长比数据扩展更有效。</li>
+<li>​<strong>公式推导</strong>：$L(N)∝N^{−0.07},L(D)∝D^{−0.27}$</li>
+<li>​<strong>应用场景</strong>：早期大模型（如GPT-3）通过堆叠参数（175B参数+300B tokens）实现突破，但存在<strong>数据饥饿</strong>风险。<br><img src="/img/0315-4.png" alt="Lena"></li>
+</ul>
+<h3 id="​Chinchilla扩展定律（DeepMind-2022）​"><a href="#​Chinchilla扩展定律（DeepMind-2022）​" class="headerlink" title="​Chinchilla扩展定律（DeepMind, 2022）​"></a>​<strong>Chinchilla扩展定律（DeepMind, 2022）​</strong></h3><p>DeepMind团队再2022年提出了另一种形式的扩展定律，旨在指导大模型充分利用给定的算力资源优化训练。</p>
+<ul>
+<li>​<strong>核心修正</strong>：模型参数与数据需<strong>同步扩展</strong>，最佳比例为 D≈20N（如70B参数模型需1.4T tokens）。</li>
+<li>​<strong>关键突破</strong>：<ul>
+<li>Chinchilla（70B参数+1.4T tokens）性能超越GPT-3（175B参数+300B tokens）。</li>
+<li>计算资源分配更高效，训练成本降低30%。</li>
+</ul>
+</li>
+<li>​<strong>现实意义</strong>：纠正了盲目扩大参数的趋势，推动模型小型化与高效训练。<br><img src="/img/0315-5.png" alt="Lena"><br><strong>扩展定律可能存在边际效益递减</strong> ：随着模型参数、数据数量的扩展，模型性能增益将逐渐减小。目前开放数据已经接近枯竭，难以支持扩展定律持续推进。</li>
+</ul>
+<hr>
+<h2 id="可预测的扩展（Predictable-Scaling）"><a href="#可预测的扩展（Predictable-Scaling）" class="headerlink" title="可预测的扩展（Predictable Scaling）"></a>可预测的扩展（Predictable Scaling）</h2><p>可预测的扩展是通过扩展定律<strong>提前估算模型性能</strong>的技术，避免大规模试错成本。其实现路径包括：</p>
+<h3 id="​数学建模与对数线性回归"><a href="#​数学建模与对数线性回归" class="headerlink" title="​数学建模与对数线性回归"></a>​<strong>数学建模与对数线性回归</strong></h3><ul>
+<li><strong>使用小规模实验（如7B参数模型）预测大模型（65B）性能，误差可控制在2%以内。</strong></li>
+<li>​<strong>案例</strong>：Meta Llama团队通过7B模型预测65B模型的困惑度（PPL）。<br><img src="/img/0315-6.png" alt="Lena"></li>
+</ul>
+<h3 id="数据瓶颈的量化分析"><a href="#数据瓶颈的量化分析" class="headerlink" title="数据瓶颈的量化分析"></a><strong>数据瓶颈的量化分析</strong></h3><ul>
+<li>当前公共高质量英文语料年增量仅3T tokens，接近饱和（利用率达98%），需依赖<strong>合成数据</strong>与多模态扩展。</li>
+<li>​<strong>应对策略</strong>：通过数据蒸馏（如DeepSeek使用GPT生成合成数据）突破数据瓶颈。</li>
+</ul>
+<h3 id="​训练动态的可控性"><a href="#​训练动态的可控性" class="headerlink" title="​训练动态的可控性"></a>​<strong>训练动态的可控性</strong></h3><ul>
+<li>​<strong>临界模型规模</strong>：研究发现，将模型缩小至计算最优规模的30%，仅需增加100%计算量即可维持性能，为小型化提供理论依据。</li>
+<li>​<strong>超参数预测</strong>：学习率与训练步长的动态调整公式（如 $LR&#x3D;0.003−0.0002⋅log_{10}​(N)$）。</li>
+</ul>
+<hr>
+<h2 id="扩展定律的实践启示"><a href="#扩展定律的实践启示" class="headerlink" title="扩展定律的实践启示"></a>扩展定律的实践启示</h2><ol>
+<li>​<strong>资源分配</strong>：根据任务需求选择扩展策略——KM适合快速突破，Chinchilla适合长期优化。</li>
+<li>​<strong>成本控制</strong>：通过可预测扩展估算最小可行模型规模，避免算力浪费（如LLaMA-7B在1T tokens训练后仍有优化空间）。</li>
+<li>​<strong>技术融合</strong>：结合强化学习（RLHF）与多模态扩展，突破单一扩展维度限制（如GPT-4V的图文推理能力）。</li>
+</ol>
+<h1 id="涌现能力"><a href="#涌现能力" class="headerlink" title="涌现能力"></a>涌现能力</h1><p>涌现能力（Emergent Abilities）是指当大规模语言模型（如GPT-3、BERT等）的参数规模达到一定阈值后，模型在没有明确训练或设计的情况下，自发地展现出一些高级或复杂的技能或行为。这些能力不是直接编程或显式训练的结果，而是模型通过学习大量数据并在内部形成复杂的表示和结构后自然而然地出现的。<strong>“小模型中不存在，但在大模型中出现的能力”</strong><br><img src="/img/0315-7.png" alt="Lena"></p>
+<h2 id="涌现能力的特点"><a href="#涌现能力的特点" class="headerlink" title="涌现能力的特点"></a>涌现能力的特点</h2><ol>
+<li>​<strong>非显式训练</strong>：模型并未针对特定任务进行专门训练，却能执行这些任务。例如，语言模型可能在没有接受翻译训练的情况下生成准确的翻译文本。</li>
+<li>​<strong>复杂性和多模态性</strong>：涌现能力涉及多层次的抽象和多种类型的数据处理，如语言理解、逻辑推理、数学计算等。</li>
+<li>​<strong>自适应性</strong>：模型能够根据上下文和任务需求灵活调整行为，例如对话系统在不同场景下进行适当回应。</li>
+</ol>
+<h2 id="代表性能力的种类"><a href="#代表性能力的种类" class="headerlink" title="代表性能力的种类"></a>代表性能力的种类</h2><ol>
+<li>​<strong>上下文学习（In-Context Learning）​</strong>：模型通过少量示例（demonstrations）快速适应新任务，无需额外训练。例如，GPT-3仅通过几个示例就能完成翻译、总结等任务。 <img src="/img/0315-8.png" alt="Lena"></li>
+<li>​<strong>进步推理（Chain of Thought Reasoning）​</strong>：模型能够进行多步逻辑推理，解决复杂的数学或逻辑问题。例如，通过“思维链提示”（Chain of Thought Prompting）策略，模型逐步推理出答案。<br><img src="/img/0315-9.png" alt="Lena"></li>
+<li>​<strong>指令遵循（Instruction Following）​</strong>：模型能够理解并执行复杂的指令，例如根据用户指令生成特定格式的文本或完成特定任务。<br><img src="/img/0315-10.png" alt="Lena"></li>
+</ol>
+<h2 id="涌现能力与扩展定律的关系"><a href="#涌现能力与扩展定律的关系" class="headerlink" title="涌现能力与扩展定律的关系"></a>涌现能力与扩展定律的关系</h2><p>扩展定律（Scaling Law）揭示了模型性能与模型规模（参数数量N）、数据量（D）和计算量（C）之间的幂律关系。随着模型规模的增加，性能呈指数级提升，但涌现能力在达到某一临界规模后突然出现，无法通过小规模模型的性能外推预测。</p>
+<p>具体来说：</p>
+<ul>
+<li>​<strong>规模效应</strong>：当模型参数规模超过某一阈值（如数十亿参数），涌现能力会突然显现。例如，GPT-3在175B参数规模下展现出上下文学习和进步推理能力。</li>
+<li>​<strong>非线性提升</strong>：涌现能力的出现与模型规模的增加呈非线性关系，表现为“相变”现象：在临界规模之前，性能接近随机；超过临界规模后，性能显著提升。</li>
+<li>​<strong>扩展定律的局限性</strong>：扩展定律可以预测模型性能的平滑提升，但无法预测涌现能力的出现，因为涌现能力是模型规模、数据量和计算量综合作用的结果。<br><img src="/img/0315-11.png" alt="Lena"><br>总结来说，涌现能力是大规模语言模型在达到一定规模后展现出的高级能力，其出现与扩展定律密切相关，但具有不可预测性和非线性特征。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Surely</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">http://example.com/2025/03/15/大模型技术基础/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">李潇的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B3%BB%E5%88%97/">大模型系列</a></div><div class="post_share"><div class="social-share" data-image="/img/813.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/03/13/Prompt-%E6%9C%80%E5%A4%A7%E7%A8%8B%E5%BA%A6%E6%A6%A8%E5%B9%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" title="Prompt-最大程度榨干大模型"><img class="cover" src="/img/prompt.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Prompt-最大程度榨干大模型</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="大模型基础"><img class="cover" src="/img/813.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-10</div><div class="title">大模型基础</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODQyMS8zNDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Surely</div><div class="author-info__description">新的开始，欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lixiao2024" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1290059235@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.surelylee2048.com.cn" target="_blank" title="博客"><i class="fab fa-algolia"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%9E%84%E5%BB%BA%E9%A2%84%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">大模型的构建预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">扩展定律基础概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%8B%E6%A0%B8%E5%BF%83%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">​核心公式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KM%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%E4%B8%8EChinchilla%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%E5%AF%B9%E6%AF%94"><span class="toc-number">2.2.</span> <span class="toc-text">KM扩展定律与Chinchilla扩展定律对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%8BKM%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%EF%BC%88OpenAI-2020%EF%BC%89%E2%80%8B"><span class="toc-number">2.2.1.</span> <span class="toc-text">​KM扩展定律（OpenAI, 2020）​</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%8BChinchilla%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%EF%BC%88DeepMind-2022%EF%BC%89%E2%80%8B"><span class="toc-number">2.2.2.</span> <span class="toc-text">​Chinchilla扩展定律（DeepMind, 2022）​</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%A2%84%E6%B5%8B%E7%9A%84%E6%89%A9%E5%B1%95%EF%BC%88Predictable-Scaling%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">可预测的扩展（Predictable Scaling）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%8B%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%AF%B9%E6%95%B0%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-number">2.3.1.</span> <span class="toc-text">​数学建模与对数线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%93%B6%E9%A2%88%E7%9A%84%E9%87%8F%E5%8C%96%E5%88%86%E6%9E%90"><span class="toc-number">2.3.2.</span> <span class="toc-text">数据瓶颈的量化分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%8B%E8%AE%AD%E7%BB%83%E5%8A%A8%E6%80%81%E7%9A%84%E5%8F%AF%E6%8E%A7%E6%80%A7"><span class="toc-number">2.3.3.</span> <span class="toc-text">​训练动态的可控性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%E7%9A%84%E5%AE%9E%E8%B7%B5%E5%90%AF%E7%A4%BA"><span class="toc-number">2.4.</span> <span class="toc-text">扩展定律的实践启示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B6%8C%E7%8E%B0%E8%83%BD%E5%8A%9B"><span class="toc-number">3.</span> <span class="toc-text">涌现能力</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%8C%E7%8E%B0%E8%83%BD%E5%8A%9B%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">3.1.</span> <span class="toc-text">涌现能力的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E8%A1%A8%E6%80%A7%E8%83%BD%E5%8A%9B%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">代表性能力的种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%8C%E7%8E%B0%E8%83%BD%E5%8A%9B%E4%B8%8E%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">3.3.</span> <span class="toc-text">涌现能力与扩展定律的关系</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="大模型技术基础"><img src="/img/813.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型技术基础"/></a><div class="content"><a class="title" href="/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="大模型技术基础">大模型技术基础</a><time datetime="2025-03-15T12:39:27.000Z" title="发表于 2025-03-15 20:39:27">2025-03-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/13/Prompt-%E6%9C%80%E5%A4%A7%E7%A8%8B%E5%BA%A6%E6%A6%A8%E5%B9%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" title="Prompt-最大程度榨干大模型"><img src="/img/prompt.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Prompt-最大程度榨干大模型"/></a><div class="content"><a class="title" href="/2025/03/13/Prompt-%E6%9C%80%E5%A4%A7%E7%A8%8B%E5%BA%A6%E6%A6%A8%E5%B9%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" title="Prompt-最大程度榨干大模型">Prompt-最大程度榨干大模型</a><time datetime="2025-03-13T14:17:20.000Z" title="发表于 2025-03-13 22:17:20">2025-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="大模型基础"><img src="/img/813.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型基础"/></a><div class="content"><a class="title" href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="大模型基础">大模型基础</a><time datetime="2025-03-10T12:52:59.000Z" title="发表于 2025-03-10 20:52:59">2025-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"><img src="/img/20250310.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"/></a><div class="content"><a class="title" href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision">论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision</a><time datetime="2025-03-09T16:04:45.000Z" title="发表于 2025-03-10 00:04:45">2025-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/07/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction/" title="论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction"><img src="/img/20250307.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction"/></a><div class="content"><a class="title" href="/2025/03/07/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-Agent-AI-Surveying-the-Horizons-of-Multimodal-Interaction/" title="论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction">论文解读-Agent AI: Surveying the Horizons of Multimodal Interaction</a><time datetime="2025-03-07T06:02:45.000Z" title="发表于 2025-03-07 14:02:45">2025-03-07</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/813.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Surely</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="I,love,u" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
