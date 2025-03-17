@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>GPT、DeepSeek发展历程 | 李潇的博客</title><meta name="author" content="Surely"><meta name="copyright" content="Surely"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="帮助大家了解大模型发展脉络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GPT、DeepSeek发展历程">
+<meta property="og:url" content="http://example.com/2025/03/17/GPT%E3%80%81DeepSeek%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/index.html">
+<meta property="og:site_name" content="李潇的博客">
+<meta property="og:description" content="帮助大家了解大模型发展脉络">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/GPT.jpg">
+<meta property="article:published_time" content="2025-03-17T15:20:30.000Z">
+<meta property="article:modified_time" content="2025-03-17T16:28:58.233Z">
+<meta property="article:author" content="Surely">
+<meta property="article:tag" content="人工智能通识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/GPT.jpg"><link rel="shortcut icon" href="/img/heart.png"><link rel="canonical" href="http://example.com/2025/03/17/GPT%E3%80%81DeepSeek%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GPT、DeepSeek发展历程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-18 00:28:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/GPT.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="李潇的博客"><span class="site-name">李潇的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> Archives</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> Dairy</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> Photos</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movies</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> Comment</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">GPT、DeepSeek发展历程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-17T15:20:30.000Z" title="发表于 2025-03-17 23:20:30">2025-03-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T16:28:58.233Z" title="更新于 2025-03-18 00:28:58">2025-03-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="GPT、DeepSeek发展历程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>从GPT-1到GPT-4，GPT系列经历了从基础架构探索到大规模预训练、再到多模态能力与安全性提升的跨越。下面分阶段介绍这些技术迭代及关键突破：<br><img src="/img/0318-1.png" alt="Lena"></p>
+<h1 id="小模型"><a href="#小模型" class="headerlink" title="小模型"></a>小模型</h1><h2 id="GPT-1：生成预训练的奠基之作"><a href="#GPT-1：生成预训练的奠基之作" class="headerlink" title="GPT-1：生成预训练的奠基之作"></a>GPT-1：生成预训练的奠基之作</h2><ul>
+<li><strong>Transformer架构应用：</strong><br>  GPT-1（1.1亿参数）基于Transformer解码器架构，这一架构由Vaswani等人提出，使得模型能够并行处理序列数据，显著提升了训练效率和上下文捕捉能力。</li>
+<li><strong>预训练与微调模式：</strong><br>  模型先进行无监督预训练（基于大规模文本数据学习语言规律），再通过有监督微调适应具体任务。这种“预训练-微调”范式为后续大规模语言模型提供了重要思路。</li>
+</ul>
+<p><img src="/img/0318-2.png" alt="Lena"></p>
+<hr>
+<h2 id="GPT-2：大规模生成能力的突破"><a href="#GPT-2：大规模生成能力的突破" class="headerlink" title="GPT-2：大规模生成能力的突破"></a>GPT-2：大规模生成能力的突破</h2><ul>
+<li><strong>规模扩展：</strong><br>  GPT-2（15亿参数）在参数数量和训练数据上大幅超过GPT-1，令模型能捕捉更丰富的语言细节与长距离依赖关系。</li>
+<li><strong>零样本泛化：</strong><br>  GPT-2展示了在未经过任务特定微调的情况下，通过上下文提示即可完成多种任务的能力，这种零样本（zero-shot）学习能力证明了规模扩展带来的意外收益。</li>
+<li><strong>文本生成质量：</strong><br>  得益于大规模预训练，GPT-2能够生成连贯、逻辑性较强的长文本，使得生成结果在流畅性和一致性上有了质的飞跃。<br><img src="/img/0318-3.png" alt="Lena"></li>
+</ul>
+<hr>
+<h1 id="大模型"><a href="#大模型" class="headerlink" title="大模型"></a>大模型</h1><h2 id="GPT-3：超大规模与少量学习的飞跃"><a href="#GPT-3：超大规模与少量学习的飞跃" class="headerlink" title="GPT-3：超大规模与少量学习的飞跃"></a>GPT-3：超大规模与少量学习的飞跃</h2><ul>
+<li><strong>参数规模激增：</strong><br>  GPT-3拥有高达1750亿个参数，相较于GPT-2的规模增长，使得模型在捕捉语言特征和知识储备上更为强大。</li>
+<li><strong>少量学习（Few-shot&#x2F;In-context Learning）：</strong><br>  GPT-3能够通过提供少量示例（甚至在零样本情况下）理解任务需求，直接在提示中学习如何完成任务，大大降低了对专门微调的依赖。</li>
+<li><strong>多任务能力：</strong><br>  模型展示了在翻译、问答、摘要等多种任务中的出色表现，尽管在事实准确性和细节一致性上仍有改进空间。</li>
+</ul>
+<hr>
+<h2 id="OpenAI-Codex"><a href="#OpenAI-Codex" class="headerlink" title="OpenAI Codex"></a>OpenAI Codex</h2><ul>
+<li><p><strong>主要特点</strong></p>
+<ul>
+<li><strong>代码生成专长：</strong> Codex 是在 GPT‑3 模型的基础上，针对编程任务进行专门微调的版本。它不仅能理解自然语言描述，还能将这些描述转换成多种编程语言（如 Python、JavaScript、Go 等）的代码，广泛应用于 GitHub Copilot 等工具中。</li>
+<li><strong>多语言支持：</strong> 除了常用编程语言，Codex 还能处理多种脚本和查询语言，帮助开发者快速补全代码或生成代码片段。</li>
+</ul>
+</li>
+<li><p><strong>核心技术</strong></p>
+<ul>
+<li><strong>Transformer 架构：</strong> 基于标准 Transformer 解码器，利用自注意力机制捕捉代码中的语法和语义关系。</li>
+<li><strong>大规模预训练与微调：</strong> 预训练阶段在海量互联网文本上进行，随后通过大量 GitHub 上公开代码数据进行微调，专门针对编程任务进行优化。</li>
+<li><strong>指令调优与 RLHF：</strong> 结合指令微调技术，使得模型能更好地理解用户的编程指令，并通过基于人类反馈的强化学习（RLHF）进一步优化生成质量。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="GPT‑3-5"><a href="#GPT‑3-5" class="headerlink" title="GPT‑3.5"></a>GPT‑3.5</h3><ul>
+<li><p><strong>主要特点</strong></p>
+<ul>
+<li><strong>自然语言理解与生成：</strong> GPT‑3.5 是 GPT‑3 的升级版，在文本生成、对话和多任务学习上有了显著提升，能够更准确地遵循用户指令，实现零样本和少样本学习。</li>
+<li><strong>对话优化：</strong> 其在对话场景下表现尤为出色，是目前 ChatGPT 背后的核心模型之一。</li>
+<li><strong>多任务适应性：</strong> 无论是文本创作、问题回答还是代码生成，GPT‑3.5 都表现出较强的泛化能力和灵活性。</li>
+</ul>
+</li>
+<li><p><strong>核心技术</strong></p>
+<ul>
+<li><strong>Transformer 解码器架构：</strong> 依然采用基于 Transformer 的结构，使其具备强大的上下文捕捉和长距离依赖建模能力。</li>
+<li><strong>大规模预训练：</strong> 利用海量文本数据进行预训练，获得广泛的世界知识。</li>
+<li><strong>指令微调和 RLHF：</strong> 通过在微调阶段使用指令数据以及人类反馈（RLHF），进一步提高了模型对用户指令的响应准确性和生成内容的安全性。</li>
+<li><strong>链式思维（Chain-of-Thought）：</strong> 部分应用中引入了链式思维技术，增强了复杂问题的推理能力。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="GPT-4：多模态能力与高质量对齐新时代"><a href="#GPT-4：多模态能力与高质量对齐新时代" class="headerlink" title="GPT-4：多模态能力与高质量对齐新时代"></a>GPT-4：多模态能力与高质量对齐新时代</h2><ul>
+<li><strong>多模态输入：</strong><br>  GPT-4不仅支持文本，还能处理图像等其他模态的信息，实现跨模态的理解与生成，为更多实际应用场景提供可能。</li>
+<li><strong>强化学习与人类反馈（RLHF）：</strong><br>  结合强化学习和人类反馈对模型进行精细调优，使输出更准确、更符合人类期望，同时有效降低了有害或不准确信息的生成风险。</li>
+<li><strong>高级推理与安全性改进：</strong><br>  GPT-4在复杂问题的逻辑推理、深度理解等方面有显著提升，并在生成过程中加强了安全性与一致性，提升了模型的整体可靠性。</li>
+<li><strong>应用拓展：</strong><br>  得益于多模态能力与更高效的对齐策略，GPT-4在学术研究、商业应用以及跨领域创新上都展现出更广泛的潜力。<br><img src="/img/0318-4.png" alt="Lena"></li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><strong>基础架构革新：</strong> 从最初的Transformer架构，到预训练与微调的策略，为语言模型的发展奠定了坚实基础。</li>
+<li><strong>规模与数据驱动：</strong> 随着参数规模的不断扩大和训练数据量的激增，模型在语言生成和理解上的能力呈指数级提升。</li>
+<li><strong>少量学习与零样本能力：</strong> GPT-3引入的少量学习和上下文学习能力，使得模型在面对未知任务时展现出强大的适应性。</li>
+<li><strong>多模态与安全对齐：</strong> GPT-4不仅扩展了输入维度，还通过RLHF等技术显著提升了输出质量和安全性，为未来AI的应用开辟了新方向。</li>
+</ul>
+<p>整体而言，从GPT-1到GPT-4，每一代模型都在架构、训练策略、数据规模以及对齐技术上取得了重要突破，推动了自然语言处理领域不断向前发展。</p>
+<hr>
+<h3 id="o‑系列模型"><a href="#o‑系列模型" class="headerlink" title="o‑系列模型"></a>o‑系列模型</h3><ul>
+<li><p><strong>主要特点</strong></p>
+<ul>
+<li><strong>专注推理与决策：</strong> o‑系列模型（如 o1、o3‑mini 等）是 Azure OpenAI 服务中针对高阶推理和问题解决任务设计的模型。这些模型不仅能够生成自然语言，还侧重于结构化输出和复杂问题的逻辑推理。</li>
+<li><strong>多模态能力：</strong> 部分 o‑系列模型支持多模态输入（例如文本和图像），这使得它们在跨领域任务和视觉理解方面具备优势。</li>
+<li><strong>高效低延迟：</strong> 经过专门优化，o‑系列在响应速度和资源利用上表现突出，适合需要实时反馈的应用场景。</li>
+</ul>
+</li>
+<li><p><strong>核心技术</strong></p>
+<ul>
+<li><strong>优化的 Transformer 架构：</strong> 在基础 Transformer 架构上，o‑系列模型通常会引入专门的改进（如混合专家模型、部分激活机制）以增强推理能力。</li>
+<li><strong>预训练与定向微调：</strong> 利用大规模预训练数据，并在后续通过针对性微调和 RLHF 进行强化，使模型在复杂推理和任务规划上更为精准。</li>
+<li><strong>多模态输入处理：</strong> 对于支持图像输入的版本，融合了视觉模块和文本生成模块，实现了跨模态信息的统一处理。</li>
+<li><strong>结构化输出和工具调用：</strong> o‑系列模型支持生成结构化数据（如 JSON 格式），并能与外部工具进行交互，辅助完成复杂决策和任务规划。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/0318-5.png" alt="Lena"></p>
+<h2 id="DeepSeek系列模型的技术演进"><a href="#DeepSeek系列模型的技术演进" class="headerlink" title="DeepSeek系列模型的技术演进"></a>DeepSeek系列模型的技术演进</h2><h3 id="DeepSeek-V1"><a href="#DeepSeek-V1" class="headerlink" title="DeepSeek-V1"></a>DeepSeek-V1</h3><p><strong>发布时间</strong>：2024 年初<br><strong>主要特点</strong></p>
+<ul>
+<li><strong>基础复现与数据处理</strong>：DeepSeek-V1 延续了 LLaMA2 的稠密（Dense）Transformer 架构，重点在于利用高质量、经严格去重、过滤和混洗的数据（共计约 2 万亿 Token 中英双语数据）来做 Scaling Laws 实验，打牢基础。</li>
+<li><strong>注意力机制</strong>：7B 模型采用标准的多头注意力（MHA），而 67B 模型则使用 Grouped-Query Attention (GQA) 来降低 KV 缓存的内存开销，从而降低推理成本。</li>
+</ul>
+<p><strong>局限性</strong></p>
+<ul>
+<li>模型在生成响应时容易重复、幻觉现象明显，对敏感信息的处理也未达到最优水平。</li>
+</ul>
+<hr>
+<h3 id="DeepSeek-V2"><a href="#DeepSeek-V2" class="headerlink" title="DeepSeek-V2"></a>DeepSeek-V2</h3><p><strong>发布时间</strong>：2024 年 5 月左右<br><strong>主要特点</strong></p>
+<ul>
+<li><strong>架构升级：从 Dense 到 MoE</strong><ul>
+<li>引入了 Mixture of Experts (MoE) 架构，大幅提升了计算效率。MoE 通过只激活部分专家模块，使得每个 token 仅激活少数参数（例如，激活 21B 参数而非全部 236B），大幅降低显存占用。</li>
+<li>同时引入了多头潜在注意力（Multi-Head Latent Attention，MLA），利用低秩压缩技术来减少 KV 缓存需求，从而加速推理速度。</li>
+</ul>
+</li>
+<li><strong>成本优势</strong><ul>
+<li>DeepSeek-V2 在训练成本上表现更优，其经济性使得每输出百万个 Token 的成本大幅低于传统大模型。</li>
+</ul>
+</li>
+<li><strong>性能提升</strong><ul>
+<li>在保持或超越同类模型性能的同时，通过 MoE 和 MLA 架构在效率和成本上均取得显著优势。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="DeepSeek-V3"><a href="#DeepSeek-V3" class="headerlink" title="DeepSeek-V3"></a>DeepSeek-V3</h3><p><strong>发布时间</strong>：2024 年 12 月<br><strong>主要特点</strong></p>
+<ul>
+<li><strong>大规模参数与高效训练</strong><ul>
+<li>模型参数达 671B（其中每个 token 激活约 37B 参数），在 V2 的基础上进一步扩大规模，同时保持较低的训练成本（约 5.58 百万美元）。</li>
+</ul>
+</li>
+<li><strong>核心技术延续与提升</strong><ul>
+<li>继续采用 V2 的 MoE 架构和 MLA 技术，并在此基础上整合了 FP8 混合精度训练、无辅助损失的负载均衡策略以及多 Token 预测（MTP）技术，使得训练效率和推理速度得到进一步提升。</li>
+</ul>
+</li>
+<li><strong>扩展上下文窗口</strong><ul>
+<li>利用高效的上下文扩展技术（例如 YaRN），将模型的上下文窗口从传统的 4K 扩展至 128K甚至更长，适用于长文本生成和复杂任务。<br><img src="/img/0318-6.png" alt="Lena"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="DeepSeek-R1（包括-R1-Zero-与-R1）"><a href="#DeepSeek-R1（包括-R1-Zero-与-R1）" class="headerlink" title="DeepSeek-R1（包括 R1-Zero 与 R1）"></a>DeepSeek-R1（包括 R1-Zero 与 R1）</h3><p><strong>发布时间</strong>：2025 年 1 月<br><strong>主要特点</strong></p>
+<ul>
+<li><strong>专注推理能力</strong><ul>
+<li>R1 系列模型在 V3-Base 架构的基础上，通过引入纯强化学习（RL）来进一步激发模型的推理和逻辑自我纠正能力。其中 R1-Zero 完全使用 Group Relative Policy Optimization (GRPO) 算法进行 RL 训练，而不依赖于监督微调（SFT）。</li>
+</ul>
+</li>
+<li><strong>奖励系统设计</strong><ul>
+<li>采用基于规则的奖励系统，包括准确性奖励（检查数学答案、代码测试结果等）和格式奖励（强制将思考过程置于特定标记内）。此外，为了解决语言混合和响应不一致的问题，进一步加入了“语言一致性奖励”。</li>
+</ul>
+</li>
+<li><strong>冷启动数据与多阶段训练</strong><ul>
+<li>为应对 RL 早期的不稳定性，R1 引入了“冷启动”数据：先用少量高质量长链推理数据对模型进行 SFT，再通过 RL 进行强化训练，最终实现了模型在数学、代码和复杂推理任务上与 OpenAI o1 相媲美的性能。</li>
+</ul>
+</li>
+<li><strong>知识蒸馏</strong><ul>
+<li>基于 R1 生成的高质量推理数据，还推出了多个经过蒸馏的小模型（如基于 LLaMA、Qwen 等），使得在资源受限的环境下也能部署具有强大推理能力的模型。<br><img src="/img/0318-7.png" alt="Lena"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><strong>从 V1 到 V2</strong>：DeepSeek 首先在 V1 中通过数据清洗和基础架构复现（LLaMA2 风格）奠定基础，随后在 V2 中引入 MoE 和 MLA 技术，实现了从全激活 Dense 模型向稀疏激活模型的转变，大幅降低了训练和推理成本，同时提高了效率。</li>
+<li><strong>从 V2 到 V3</strong>：在 V3 中，DeepSeek 在保持 V2 架构优势的基础上，通过扩大参数规模、优化混合精度训练（FP8）、改进负载均衡和引入多 Token 预测技术，使得模型性能和上下文处理能力大幅提升，接近甚至媲美封闭模型的水平。</li>
+<li><strong>从 V3 到 R1</strong>：R1 系列通过纯 RL（GRPO 算法）和精心设计的奖励体系，在 V3-Base 的基础上进一步增强了模型的推理和逻辑自我纠正能力，同时结合冷启动数据和多阶段训练，解决了语言混合、可读性差等问题，最终形成了适用于专业领域的高性能推理模型。知识蒸馏技术则将这种强大推理能力迁移到小型模型上，便于广泛部署。</li>
+</ul>
+<p>这种技术演进展示了 DeepSeek 如何在有限资源和严苛成本约束下，通过算法与架构创新不断突破大模型的性能瓶颈，逐步实现从通用文本生成到复杂逻辑推理的跨越，最终挑战国际顶尖水平。<br>我们后面几期会着重讲讲这篇文章出现到的一些重要技术。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Surely</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/03/17/GPT%E3%80%81DeepSeek%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/">http://example.com/2025/03/17/GPT、DeepSeek发展历程/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">李潇的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%9A%E8%AF%86/">人工智能通识</a></div><div class="post_share"><div class="social-share" data-image="/img/GPT.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="大模型技术基础"><img class="cover" src="/img/813.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">大模型技术基础</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/03/13/Prompt-%E6%9C%80%E5%A4%A7%E7%A8%8B%E5%BA%A6%E6%A6%A8%E5%B9%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" title="Prompt-最大程度榨干大模型"><img class="cover" src="/img/prompt.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-13</div><div class="title">Prompt-最大程度榨干大模型</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODQyMS8zNDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Surely</div><div class="author-info__description">新的开始，欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lixiao2024" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1290059235@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.surelylee2048.com.cn" target="_blank" title="博客"><i class="fab fa-algolia"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">小模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GPT-1%EF%BC%9A%E7%94%9F%E6%88%90%E9%A2%84%E8%AE%AD%E7%BB%83%E7%9A%84%E5%A5%A0%E5%9F%BA%E4%B9%8B%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">GPT-1：生成预训练的奠基之作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPT-2%EF%BC%9A%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%94%9F%E6%88%90%E8%83%BD%E5%8A%9B%E7%9A%84%E7%AA%81%E7%A0%B4"><span class="toc-number">1.2.</span> <span class="toc-text">GPT-2：大规模生成能力的突破</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">大模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GPT-3%EF%BC%9A%E8%B6%85%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%8E%E5%B0%91%E9%87%8F%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%A3%9E%E8%B7%83"><span class="toc-number">2.1.</span> <span class="toc-text">GPT-3：超大规模与少量学习的飞跃</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenAI-Codex"><span class="toc-number">2.2.</span> <span class="toc-text">OpenAI Codex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GPT%E2%80%913-5"><span class="toc-number">2.2.1.</span> <span class="toc-text">GPT‑3.5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPT-4%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81%E8%83%BD%E5%8A%9B%E4%B8%8E%E9%AB%98%E8%B4%A8%E9%87%8F%E5%AF%B9%E9%BD%90%E6%96%B0%E6%97%B6%E4%BB%A3"><span class="toc-number">2.3.</span> <span class="toc-text">GPT-4：多模态能力与高质量对齐新时代</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.3.1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#o%E2%80%91%E7%B3%BB%E5%88%97%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.3.2.</span> <span class="toc-text">o‑系列模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DeepSeek%E7%B3%BB%E5%88%97%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B"><span class="toc-number">2.4.</span> <span class="toc-text">DeepSeek系列模型的技术演进</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DeepSeek-V1"><span class="toc-number">2.4.1.</span> <span class="toc-text">DeepSeek-V1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DeepSeek-V2"><span class="toc-number">2.4.2.</span> <span class="toc-text">DeepSeek-V2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DeepSeek-V3"><span class="toc-number">2.4.3.</span> <span class="toc-text">DeepSeek-V3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DeepSeek-R1%EF%BC%88%E5%8C%85%E6%8B%AC-R1-Zero-%E4%B8%8E-R1%EF%BC%89"><span class="toc-number">2.4.4.</span> <span class="toc-text">DeepSeek-R1（包括 R1-Zero 与 R1）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-number">2.4.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/17/GPT%E3%80%81DeepSeek%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="GPT、DeepSeek发展历程"><img src="/img/GPT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GPT、DeepSeek发展历程"/></a><div class="content"><a class="title" href="/2025/03/17/GPT%E3%80%81DeepSeek%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="GPT、DeepSeek发展历程">GPT、DeepSeek发展历程</a><time datetime="2025-03-17T15:20:30.000Z" title="发表于 2025-03-17 23:20:30">2025-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="大模型技术基础"><img src="/img/813.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型技术基础"/></a><div class="content"><a class="title" href="/2025/03/15/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="大模型技术基础">大模型技术基础</a><time datetime="2025-03-15T12:39:27.000Z" title="发表于 2025-03-15 20:39:27">2025-03-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/13/Prompt-%E6%9C%80%E5%A4%A7%E7%A8%8B%E5%BA%A6%E6%A6%A8%E5%B9%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" title="Prompt-最大程度榨干大模型"><img src="/img/prompt.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Prompt-最大程度榨干大模型"/></a><div class="content"><a class="title" href="/2025/03/13/Prompt-%E6%9C%80%E5%A4%A7%E7%A8%8B%E5%BA%A6%E6%A6%A8%E5%B9%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" title="Prompt-最大程度榨干大模型">Prompt-最大程度榨干大模型</a><time datetime="2025-03-13T14:17:20.000Z" title="发表于 2025-03-13 22:17:20">2025-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="大模型发展历程"><img src="/img/813.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型发展历程"/></a><div class="content"><a class="title" href="/2025/03/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" title="大模型发展历程">大模型发展历程</a><time datetime="2025-03-10T12:52:59.000Z" title="发表于 2025-03-10 20:52:59">2025-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"><img src="/img/20250310.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision"/></a><div class="content"><a class="title" href="/2025/03/10/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB-CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision/" title="论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision">论文解读-CLIP:Learning Transferable Visual Models From Natural Language Supervision</a><time datetime="2025-03-09T16:04:45.000Z" title="发表于 2025-03-10 00:04:45">2025-03-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/GPT.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Surely</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="I,love,u" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
